@@ -84,7 +84,7 @@ a:hover {
 }
 
 .quote-text {
-  @apply font-gangster text-4xl font-light leading-md-1 lg:text-6xl;
+  @apply font-gangster text-3xl font-light leading-md-1 lg:text-6xl;
 }
 
 .services-short {
