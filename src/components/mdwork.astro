@@ -1,0 +1,29 @@
+---
+export interface Props {
+  heading: string;
+  paragraph: string;
+  src: string;
+  alt: string;
+  ordertext: string;
+  orderimg: string;
+}
+
+const { heading, paragraph, src, alt, ordertext, orderimg } = Astro.props;
+---
+
+<div
+  class="work-card grid grid-flow-row gap-2 md:grid-flow-col md:grid-cols-2 md:items-center md:gap-x-16 lg:gap-x-24"
+>
+  <div class={`text-wrap ${ordertext} px-2 pt-2 md:px-0`}>
+    <h4 class="pb-2">{heading}</h4>
+    <p>
+      {paragraph}
+    </p>
+  </div>
+  <div
+    class={`img-wrap ${orderimg} flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-md-flamingo-100 md:aspect-[1.5]`}
+  >
+    <img src={src} alt={alt} />
+  </div>
+</div>
+<!-- /.work-card -->

@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ratio: calc(1.25);
+
+  --font-size-xs: calc(var(--font-size-base) * 4 / 6);
+  --font-size-sm: calc(var(--font-size-base) * 5 / 6);
+  --font-size-base: calc((18 / 16) * 1rem);
+  --font-size-lg: calc(var(--font-size-base) * var(--ratio));
+  --font-size-xl: calc(var(--font-size-lg) * var(--ratio));
+  --font-size-2xl: calc(var(--font-size-xl) * var(--ratio));
+  --font-size-3xl: calc(var(--font-size-2xl) * var(--ratio));
+  --font-size-4xl: calc(var(--font-size-3xl) * var(--ratio));
+  --font-size-5xl: calc(var(--font-size-4xl) * var(--ratio));
+  --font-size-6xl: calc(var(--font-size-5xl) * var(--ratio));
+  --font-size-7xl: calc(var(--font-size-6xl) * var(--ratio));
+  --font-size-8xl: calc(var(--font-size-7xl) * var(--ratio));
+  --font-size-9xl: calc(var(--font-size-8xl) * var(--ratio));
+
+  --line-height-0: calc(var(--line-height-1) / 1.2);
+  --line-height-1: calc(var(--line-height-2) / 1.2);
+  --line-height-2: calc(var(--line-height-3) / 1.2);
+  --line-height-3: calc(var(--line-height-4) / 1.2);
+  --line-height-4: 1.8;
+  --line-height-5: calc(var(--line-height-4) * 1.2);
+  --line-height-6: calc(var(--line-height-5) * 1.2);
+  --line-height-7: calc(var(--line-height-6) * 1.2);
+
+  --letter-spacing-1: -0.01em;
+  --letter-spacing-2: -0.015em;
+  --letter-spacing-3: -0.02em;
+
+  --md-bg: #fefefe;
+  --md-white: #ffffff;
+  --md-black: #000000;
+  --md-grey: #858585;
+  --md-dark-red: #3b1003;
+  --md-lilac-400: #b47efe;
+  --md-lilac-300: #e2d1f9;
+  --md-lilac-200: #e2d1f9;
+  --md-lilac-100: #f6efff;
+  --md-astronaut-400: #2f3c7e;
+  --md-astronaut-300: #475aba;
+  --md-astronaut-200: #a3acdd;
+  --md-astronaut-100: #e0e3f4;
+  --md-flamingo-400: #f46036;
+  --md-flamingo-300: #f78868;
+  --md-flamingo-200: #fbc3b4;
+  --md-flamingo-100: #fff5f2;
+  --md-transparent: transparent;
+}
+
+/* Basic text styles */
+
+h1,
+h2 {
+  @apply pb-1 font-jost text-4xl font-medium leading-md-1 lg:text-6xl;
+}
+
+h3 {
+  @apply pb-8 font-jost text-xl font-medium leading-md-1;
+}
+
+h4 {
+  @apply pb-1 font-jost text-lg font-medium leading-md-1;
+}
+
+body {
+  @apply text-base leading-md-4;
+}
+
+a:hover {
+  color: var(--md-flamingo-400);
+}
+
+.hero-text {
+  @apply self-center md:mx-auto md:max-w-6xl md:px-20 md:text-center;
+}
+
+.intro-text {
+  @apply font-jost text-2xl font-light leading-md-3 tracking-md-0 lg:text-3xl;
+}
+
+.quote-text {
+  @apply font-gangster text-4xl font-light leading-md-1 lg:text-6xl;
+}
+
+.services-short {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  @apply bg-clip-text pb-2 font-gangster text-4xl font-light leading-md-1 text-md-transparent lg:text-5xl lg:font-light;
+}
+
+/* ----Form ---- */
+/* Input checked btn */
+.input-text-field:focus {
+  @apply border-md-flamingo-400;
+}
+
+.input-text-field:focus::placeholder {
+  @apply text-md-flamingo-400;
+}
+
+.input-text-field:focus {
+  @apply border-b-[1px];
+}
+
+.input-text-field::placeholder-shown {
+  @apply text-md-black;
+}
+
+.input-text-field {
+  @apply border-b-[1px] border-gray-400 pb-1 text-md-flamingo-400 outline-none;
+}
+
+.input-text-field:hover,
+.input-text-field:hover::placeholder {
+  @apply border-md-flamingo-400 text-md-flamingo-400;
+}
+
+.check-btn {
+  @apply hidden;
+}
+
+.check-btn + span {
+  @apply cursor-pointer rounded-full border-[1px] border-gray-400 bg-md-bg px-8 py-4;
+}
+
+.check-btn:not(:checked) + span:hover {
+  @apply border-md-flamingo-400 text-md-flamingo-400;
+}
+
+.check-btn + span:active,
+.check-btn:checked + span {
+  @apply border-md-flamingo-400 bg-md-flamingo-400 text-md-white;
+}
+
+/* ---- Font imports ---- */
+/* -- Font Jost -- */
+/* Jost regular */
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/jost/Jost-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Jost italic */
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/jost/Jost-Italic.ttf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Jost Light */
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/jost/Jost-Light.ttf');
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* Jost Light italic */
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/jost/Jost-LightItalic.ttf');
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Jost Medium */
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/jost/Jost-Medium.ttf');
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Jost Medium italic */
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/jost/Jost-MediumItalic.ttf');
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* -- Font Gangster -- */
+/* Gangster light */
+@font-face {
+  font-family: 'Gangster';
+  src: url('/fonts/gangster/GangsterGrotesk-Light.woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* Gangster regular */
+@font-face {
+  font-family: 'Gangster';
+  src: url('/fonts/gangster/GangsterGrotesk-Regular.woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Gangster regular */
+@font-face {
+  font-family: 'Gangster';
+  src: url('/fonts/gangster/GangsterGrotesk-Bold.woff');
+  font-style: normal;
+  font-weight: 500;
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: visible;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.hamburger-box {
+  margin-top: -12px;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before {
+  background-color: #000000;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+}
+.hamburger-inner,
+.hamburger-inner::before {
+  width: 24px;
+  height: 1.5px;
+  background-color: #000000;
+  border-radius: 2px;
+  position: relative;
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hamburger-inner::before {
+  content: '';
+  display: block;
+}
+.hamburger-inner::before {
+  top: -5px;
+}
+
+/* Hamburger Slider */
+.hamburger--slider .hamburger-inner::before {
+  top: 10px;
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hamburger--slider .hamburger-inner::after {
+  top: 20px;
+}
+
+.hamburger--slider.is-active .hamburger-inner {
+  transform: translate3d(0, 5px, 0) rotate(45deg);
+}
+.hamburger--slider.is-active .hamburger-inner::before {
+  transform: translate3d(0, -10px, 0) rotate(-90deg);
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+/* Scrollbar x hidden */
+.pinky-grid {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-x: auto; /* Hide scrollbars */
+  overflow-y: visible;
+}
+
+.pinky-grid::-webkit-scrollbar {
+  display: none;
+}

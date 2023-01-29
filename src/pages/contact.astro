@@ -1,0 +1,409 @@
+---
+import Standard from '../layouts/standard.astro';
+import '../styles/base.css';
+---
+
+<Standard title="Studio Moondust - Contact" h1="Contact">
+  <main>
+    <section class="hero-intro px-4 pt-40 pb-16 font-jost md:pt-40 md:pb-24 lg:pt-56 lg:pb-36">
+      <div class="hero-text">
+        <h2>
+          Hello! Have a project? <br /> Let's chat.
+        </h2>
+      </div>
+    </section><!-- /.hero -->
+    <section class="contact-form mx-auto max-w-[960px] px-4 md:px-8 lg:px-16 lg:pb-24">
+      <form class="flex flex-col items-start justify-start space-y-10" action="">
+        <div class="interested">
+          <h3 class="mb-2 py-4 font-jost text-xl">Ik ben geïnteresseerd in</h3>
+          <div
+            class="checkboxes first-letter: flex flex-row flex-wrap gap-4 align-middle [&_label]:py-4"
+          >
+            <label for="int-scratch">
+              <input class="check-btn hidden" type="checkbox" id="int-scratch" />
+              <span>site from scratch</span>
+            </label>
+            <label for="int-branding">
+              <input class="check-btn hidden" type="checkbox" id="int-branding" />
+              <span>fabulous branding</span>
+            </label>
+            <label for="int-development">
+              <input class="check-btn hidden" type="checkbox" id="int-development" />
+              <span>development</span>
+            </label>
+            <label for="int-webdesign">
+              <input class="check-btn hidden" type="checkbox" id="int-webdesign" />
+              <span>webdesign</span>
+            </label>
+            <label for="int-copy">
+              <input class="check-btn hidden" type="checkbox" id="int-copy" />
+              <span>copywriting</span>
+            </label>
+            <label for="int-content">
+              <input class="check-btn hidden" type="checkbox" id="int-content" />
+              <span>content marketing</span>
+            </label>
+            <label for="int-onderhoud">
+              <input class="check-btn hidden" type="checkbox" id="int-onderhoud" />
+              <span>onderhoud</span>
+            </label>
+            <label for="int-marketing">
+              <input class="check-btn hidden" type="checkbox" id="int-marketing" />
+              <span>marketing</span>
+            </label>
+          </div><!--/.checkboxes -->
+        </div><!-- /.interested -->
+        <div
+          class="text-inputs flex w-full flex-col space-y-10 font-jost text-xl font-medium [&_::placeholder]:text-md-black"
+        >
+          <input class="input-text-field" type="text" id="name" placeholder="Naam*" required />
+          <input class="input-text-field" type="text" id="email" placeholder="Email*" required />
+          <input class="input-text-field" type="text" id="project" placeholder="Project" />
+          <textarea
+            class="input-text-field"
+            id="project-tellus"
+            placeholder="Vertel ons over je project"
+            required></textarea>
+        </div><!-- /.text-inputs -->
+        <div class="budget">
+          <h3 class="mb-2 py-4 font-jost text-xl">Budget(€)</h3>
+          <div class="checkboxes flex flex-row flex-wrap gap-4 align-middle [&_label]:py-4">
+            <label for="bug-2k">
+              <input class="check-btn" type="checkbox" id="bug-2k" />
+              <span>2.5K - 5K</span>
+            </label>
+            <label for="bug-5k">
+              <input class="check-btn" type="checkbox" id="bug-5k" />
+              <span>5K - 7.5K</span>
+            </label>
+            <label for="bug-7k">
+              <input class="check-btn" type="checkbox" id="bug-7k" />
+              <span>7.5K - 10K</span>
+            </label>
+            <label for="bug-10k">
+              <input class="check-btn" type="checkbox" id="bug-10k" />
+              <span>10K - 15K</span>
+            </label>
+            <label for="bug-15k">
+              <input class="check-btn" type="checkbox" id="bug-15k" />
+              <span>15K+</span>
+            </label>
+          </div><!--/.checkboxes -->
+        </div><!-- /.budget -->
+
+        <input
+          class="cursor-pointer rounded-full border-[1px] border-gray-300 bg-md-lilac-400 py-4 px-8 text-md-white hover:bg-md-lilac-300 active:bg-md-lilac-300"
+          type="submit"
+          value="Verzend"
+        />
+      </form>
+      <div class="form-outro grid w-full grid-flow-col gap-8 pt-16">
+        <div class="flex flex-col space-y-1">
+          <h4 class="font-jost font-medium">Gegevens</h4>
+          <a class="flex flex-row items-center" title="Moondust Email" href="#">
+            hello@studiomoondust.com
+            <div class="ml-1 h-5 w-5">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4 3H9.6C10.1523 3 10.6 3.44771 10.6 4V5H11.6V4C11.6 2.89543 10.7046 2 9.6 2H4C2.89543 2 2 2.89543 2 4V9.6C2 10.7046 2.89543 11.6 4 11.6H5V10.6H4C3.44771 10.6 3 10.1523 3 9.6V4C3 3.44771 3.44771 3 4 3Z"
+                  fill="currentColor"></path>
+                <rect x="4.8999" y="4.90039" width="8.6" height="8.6" rx="1.5" stroke="currentColor"
+                ></rect>
+              </svg>
+            </div><!-- end icon -->
+          </a>
+          <div class="flex flex-row items-center">KvK: 81357389</div><!-- end .outro-link -->
+          <a class="flex flex-row items-center" title="Algemene Voorwaarden" href="#">
+            algemene voorwaarden
+            <div class="ml-1 h-5 w-5">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11 8.07579V12.2783C11 12.8306 10.5523 13.2783 10 13.2783H4C3.44772 13.2783 3 12.8306 3 12.2783V6.27832C3 5.72604 3.44772 5.27832 4 5.27832H8.3999V4.27832H4C2.89543 4.27832 2 5.17375 2 6.27832V12.2783C2 13.3829 2.89543 14.2783 4 14.2783H10C11.1046 14.2783 12 13.3829 12 12.2783V8.07579H11Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M6.43743 8.4912C6.23717 8.68132 6.23717 8.98958 6.43743 9.1797C6.6377 9.36983 6.9624 9.36983 7.16266 9.1797L6.43743 8.4912ZM14.5129 2.00001C14.5129 1.73113 14.2833 1.51316 14 1.51316L9.38472 1.51316C9.1015 1.51316 8.87191 1.73113 8.87191 2.00001C8.87191 2.26888 9.1015 2.48685 9.38472 2.48685L13.4872 2.48685L13.4872 6.38165C13.4872 6.65052 13.7168 6.86849 14 6.86849C14.2833 6.86849 14.5129 6.65052 14.5129 6.38165L14.5129 2.00001ZM7.16266 9.1797L14.3627 2.34426L13.6374 1.65575L6.43743 8.4912L7.16266 9.1797Z"
+                  fill="currentColor"></path>
+              </svg>
+            </div><!-- end icon -->
+          </a><!-- end ./link -->
+        </div><!-- end .first column -->
+        <div class="flex flex-col space-y-1">
+          <h4 class="font-jost font-medium">Socials</h4>
+          <a class="flex flex-row items-center" title="Algemene Voorwaarden" href="#">
+            Instagram
+            <div class="ml-1 h-5 w-5">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11 8.07579V12.2783C11 12.8306 10.5523 13.2783 10 13.2783H4C3.44772 13.2783 3 12.8306 3 12.2783V6.27832C3 5.72604 3.44772 5.27832 4 5.27832H8.3999V4.27832H4C2.89543 4.27832 2 5.17375 2 6.27832V12.2783C2 13.3829 2.89543 14.2783 4 14.2783H10C11.1046 14.2783 12 13.3829 12 12.2783V8.07579H11Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M6.43743 8.4912C6.23717 8.68132 6.23717 8.98958 6.43743 9.1797C6.6377 9.36983 6.9624 9.36983 7.16266 9.1797L6.43743 8.4912ZM14.5129 2.00001C14.5129 1.73113 14.2833 1.51316 14 1.51316L9.38472 1.51316C9.1015 1.51316 8.87191 1.73113 8.87191 2.00001C8.87191 2.26888 9.1015 2.48685 9.38472 2.48685L13.4872 2.48685L13.4872 6.38165C13.4872 6.65052 13.7168 6.86849 14 6.86849C14.2833 6.86849 14.5129 6.65052 14.5129 6.38165L14.5129 2.00001ZM7.16266 9.1797L14.3627 2.34426L13.6374 1.65575L6.43743 8.4912L7.16266 9.1797Z"
+                  fill="currentColor"></path>
+              </svg>
+            </div><!-- end icon -->
+          </a><!-- end ./link -->
+          <a class="flex flex-row items-center" title="Algemene Voorwaarden" href="#">
+            LinkedIn
+            <div class="ml-1 h-5 w-5">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11 8.07579V12.2783C11 12.8306 10.5523 13.2783 10 13.2783H4C3.44772 13.2783 3 12.8306 3 12.2783V6.27832C3 5.72604 3.44772 5.27832 4 5.27832H8.3999V4.27832H4C2.89543 4.27832 2 5.17375 2 6.27832V12.2783C2 13.3829 2.89543 14.2783 4 14.2783H10C11.1046 14.2783 12 13.3829 12 12.2783V8.07579H11Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M6.43743 8.4912C6.23717 8.68132 6.23717 8.98958 6.43743 9.1797C6.6377 9.36983 6.9624 9.36983 7.16266 9.1797L6.43743 8.4912ZM14.5129 2.00001C14.5129 1.73113 14.2833 1.51316 14 1.51316L9.38472 1.51316C9.1015 1.51316 8.87191 1.73113 8.87191 2.00001C8.87191 2.26888 9.1015 2.48685 9.38472 2.48685L13.4872 2.48685L13.4872 6.38165C13.4872 6.65052 13.7168 6.86849 14 6.86849C14.2833 6.86849 14.5129 6.65052 14.5129 6.38165L14.5129 2.00001ZM7.16266 9.1797L14.3627 2.34426L13.6374 1.65575L6.43743 8.4912L7.16266 9.1797Z"
+                  fill="currentColor"></path>
+              </svg>
+            </div><!-- end icon -->
+          </a><!-- end ./link -->
+        </div><!-- end /second column -->
+        <div class="flex flex-col space-y-1">
+          <h4 class="font-jost font-medium">Telefoon</h4>
+          <div>Pim +31 6 137 68 738</div>
+          <div>Tess +31 6 24 42 41 33</div>
+        </div><!-- end /third column -->
+      </div><!-- /.form-ioutro -->
+    </section>
+    <section class="img-divider md:px-4">
+      <div
+        class="img-wrap flex aspect-[0.85] w-full items-center justify-center overflow-hidden rounded-3xl bg-md-grey md:aspect-[2]"
+      >
+        <img src="object-cover" alt="#" />
+      </div>
+    </section><!-- /.img-divider -->
+    <section class="quote mx-auto max-w-screen-xl py-16 px-4 md:px-8 lg:px-16 lg:py-32">
+      <h3 class="quote-text">
+        *<br /> We zijn altijd op zoek naar freelancers om mee samen te werken. Interesse? Stuur een
+        mail met je werk en waarom jij awesome bent
+      </h3>
+    </section><!-- /.quote -->
+    <section class="illustrations mx-auto max-w-screen-xl px-4 pb-16 md:px-8 lg:px-16 lg:pb-44">
+      <div class="illustrations-grid grid grid-flow-row grid-cols-3 gap-16">
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 360 359"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_825_3445)">
+            <rect width="359.438" height="359" fill="#C79EFE"></rect>
+            <rect width="359.438" height="31.7348" fill="#FEFEFE"></rect>
+            <rect y="359" width="359" height="31.7735" transform="rotate(-90 0 359)" fill="#FEFEFE"
+            ></rect>
+            <rect
+              x="327.665"
+              y="359"
+              width="359"
+              height="31.7735"
+              transform="rotate(-90 327.665 359)"
+              fill="#FEFEFE"></rect>
+            <rect y="327.265" width="359.438" height="31.7348" fill="#FEFEFE"></rect>
+            <path
+              d="M96.8631 643.69C-39.6207 564.987 -86.3835 390.679 -7.58458 254.361C262.965 306.526 289.839 -4.95742 426.322 73.7455C562.806 152.448 565.466 403.052 486.667 539.37C407.868 675.687 233.347 722.393 96.8631 643.69Z"
+              fill="#E0E3F4"></path>
+            <path
+              d="M406.524 187.999C512.271 248.977 531.011 414.292 469.958 519.91C408.904 625.529 273.686 661.716 167.938 600.737C62.191 539.758 -47.9017 470.722 13.1515 365.104C220.621 333.672 300.777 127.02 406.524 187.999Z"
+              fill="#FFF5F2"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0_825_3445">
+              <rect width="359.438" height="359" fill="white"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 360 359"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_825_3429)">
+            <rect width="359.438" height="359" transform="translate(0.28125)" fill="#F6EFFF"></rect>
+            <rect x="0.28125" width="359.438" height="31.7348" fill="#FEFEFE"></rect>
+            <rect
+              x="0.28125"
+              y="359"
+              width="359"
+              height="31.7735"
+              transform="rotate(-90 0.28125 359)"
+              fill="#FEFEFE"></rect>
+            <rect
+              x="327.946"
+              y="359"
+              width="359"
+              height="31.7735"
+              transform="rotate(-90 327.946 359)"
+              fill="#FEFEFE"></rect>
+            <rect x="0.28125" y="327.265" width="359.438" height="31.7348" fill="#FEFEFE"></rect>
+            <ellipse cx="359.554" cy="-0.165283" rx="179.885" ry="179.665" fill="#F46036"></ellipse>
+            <ellipse cx="0.116028" cy="358.835" rx="179.885" ry="179.665" fill="#B47EFE"></ellipse>
+          </g>
+          <defs>
+            <clipPath id="clip0_825_3429">
+              <rect width="359.438" height="359" fill="white" transform="translate(0.28125)"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 360 359"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_825_3437)">
+            <rect width="359.438" height="359" transform="translate(0.561523)" fill="#F6EFFF"
+            ></rect>
+            <rect x="0.561523" width="359.438" height="31.7348" fill="#FEFEFE"></rect>
+            <rect
+              x="328.227"
+              y="359"
+              width="359"
+              height="31.7735"
+              transform="rotate(-90 328.227 359)"
+              fill="#FEFEFE"></rect>
+            <ellipse cx="0.230103" cy="359" rx="359.769" ry="359" fill="#A3ACDD"></ellipse>
+            <rect
+              x="0.561523"
+              y="359"
+              width="359"
+              height="31.7735"
+              transform="rotate(-90 0.561523 359)"
+              fill="#FEFEFE"></rect>
+            <rect x="0.561523" y="327.265" width="359.438" height="31.7348" fill="#FEFEFE"></rect>
+            <ellipse cx="-0.265808" cy="359.496" rx="179.885" ry="179.665" fill="#F46036"></ellipse>
+          </g>
+          <defs>
+            <clipPath id="clip0_825_3437">
+              <rect width="359.438" height="359" fill="white" transform="translate(0.561523)"
+              ></rect>
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+    </section><!-- /.illustrations -->
+    <section class="faq mx-auto max-w-screen-xl px-4 pb-16 md:px-8 lg:px-16 lg:pb-32">
+      <div class="faq-grid grid grid-flow-row grid-cols-[0.5fr_1fr] gap-24">
+        <h2>FAQ</h2>
+        <div class="faq-questions-wrap space-y-20 [&_h3]:pb-2">
+          <div>
+            <h3>Met wie werken jullie vooral samen?</h3>
+            <p>
+              Wij werken voornamelijk samen met bedrijven/start-up grootte 5-50 werknemers die op
+              zoek zijn naar branding/website om het bedrijf verder te helpen. We raken vooral
+              geinspireerd door hun goals, missies, purpose, duurzaamheid, etc. Benieuwd? Neem
+              contact op om te zien hoe we je kunnen helpen
+            </p>
+          </div>
+          <div>
+            <h3>Wat is jullie droomproject?</h3>
+            <p>
+              We houden van projecten die uitdagen, creatieve vrijheid, duurzaam, bla bla bla.
+              Waarin we onze visie op het nieuwe werken kwijt kunnen met bedrijven die er net zo ins
+              taan als wij. samenwerken met frreelancers. Droom zou zijn bedrijven die unieke
+              producten maken of dienst leveren die de wereld een beetje beter maken. We houden
+              specifiek van om verhalen te vertellen in een animatie jasje en interactieve scroll.
+            </p>
+          </div>
+          <div>
+            <h3>Hoe ziet jullie process eruit?</h3>
+            <p>
+              ligt eraan waar het proces begint. staat er al iets of niets? we willen altijd eerst
+              alles over je weten. wij zetten projectteam op op basis van je vraag. samenwerken en
+              vertrouwen. 25% betaling na designfase.
+            </p>
+          </div>
+          <div>
+            <h3>Naar wat voor klanten zijn jullie vooral op zoek?</h3>
+            <p>
+              Wij werken voornamelijk samen met bedrijven/start-up grootte 5-50 werknemers die op
+              zoek zijn naar branding/website om het bedrijf verder te helpen. We raken vooral
+              geinspireerd door hun goals, missies, purpose, duurzaamheid, etc. Benieuwd? Neem
+              contact op om te zien hoe we je kunnen helpen
+            </p>
+          </div>
+          <div>
+            <h3>Hoeveel kost het om met jullie samen te werken?</h3>
+            <p>
+              hoe duur is een brood? compleet afhankelijk van half of heel of met of zonder zaden.
+              een indicatie geven van een prijs is erg lastig als je niet weet wat de vraag is.
+              prijzen beginnen bij 7,5 en lopen op tot 50+. neem contact op. <br />
+              Fijn - projectbasis prijs - lastig zeggen vooraf - eerst idee krijgen van het project,
+              bedrijf en doelen.  Wij vinden het belangrijk - waarde toe te voegen aan bedrijf - en voor
+              die expertise betaald te krijgen. Uiteindelijke prijs afhangen van... blablabla. <br
+              />
+              Nemen de prijs erg serieus - leggen ziel en zaligheid erin  - belangrijk dat we van beide
+              kanten er in investeren - zodat wij wij kunnen zijn.
+            </p>
+          </div>
+          <div>
+            <h3>Wat is jullie droomproject?</h3>
+            <p>
+              We houden van projecten die uitdagen, creatieve vrijheid, duurzaam, bla bla bla.
+              Waarin we onze visie op het nieuwe werken kwijt kunnen met bedrijven die er net zo ins
+              taan als wij. samenwerken met frreelancers. Droom zou zijn bedrijven die unieke
+              producten maken of dienst leveren die de wereld een beetje beter maken. We houden
+              specifiek van om verhalen te vertellen in een animatie jasje en interactieve scroll.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section><!-- /.faq -->
+  </main>
+
+  <script>
+    // resizing text-area field
+    const txHeight = 48;
+    const tx = document.getElementsByTagName('textarea');
+
+    for (let i = 0; i < tx.length; i++) {
+      if (tx[i].value == '') {
+        tx[i].setAttribute('style', 'height:' + txHeight + 'px;overflow-y:hidden;');
+      } else {
+        tx[i].setAttribute(
+          'style',
+          'height:' + tx[i].scrollHeight + 'px;overflow-y:hidden;' + 'padding-bottom:' + '8px;'
+        );
+      }
+      tx[i].addEventListener('input', OnInput, false);
+    }
+
+    function OnInput(this: any) {
+      this.style.height = 'auto';
+      this.style.height = this.scrollHeight + 'px';
+    }
+  </script>
+</Standard>

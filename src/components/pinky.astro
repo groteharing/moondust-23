@@ -1,0 +1,23 @@
+---
+export interface Props {
+  heading: string;
+  paragraph: string;
+  src: string;
+  alt: string;
+}
+
+const { heading, paragraph, src, alt } = Astro.props;
+---
+
+<div class="pinky-container space-y-4">
+  <div
+    class="img-wrap flex aspect-square w-full items-center justify-center overflow-hidden rounded-3xl bg-md-astronaut-100"
+  >
+    <img class="object-cover" src={src} alt={alt} />
+  </div>
+  <div class="description py-1 px-2">
+    <h4>{heading}</h4>
+    <p>{paragraph}</p>
+  </div>
+</div>
+<!-- /.pinky-container -->

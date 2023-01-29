@@ -1,0 +1,296 @@
+---
+import Standard from '../layouts/standard.astro';
+import Card from '../components/card.astro';
+import Pinky from '../components/pinky.astro';
+import '../styles/base.css';
+---
+
+<Standard title="Studio Moondust" h1="Studio Moondust">
+  <main class="">
+    <section id="container-hero" class="hero font-jost md:h-screen md:w-full md:px-4 md:py-4">
+      <div
+        class="hero relative h-full w-full overflow-hidden bg-gradient-to-b from-md-astronaut-200 to-md-flamingo-200 md:rounded-2xl"
+      >
+        <div class="hero-grid relative z-20 grid h-full grid-rows-3 px-4">
+          <div class="empty self-start"></div>
+          <div class="hero-text">
+            <h2 class="relative inline text-md-white">
+              Creative micro-agency that launches mission driven brands
+            </h2>
+            <div class="md:hi relative left-[-8] inline-block h-10 w-10 lg:h-14 lg:w-14">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 106 108"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M34.2755 85.843C27.8674 105.249 2.23474 105.249 2.23474 105.249C2.23474 105.249 2.23474 79.3744 21.4592 72.9058"
+                  fill="#F46036"></path>
+                <path
+                  d="M91.949 40.5625L53.5 79.3741L27.8674 53.4997L66.3163 14.688C80.8753 -0.00832278 95.4343 0.135033 101.643 1.07016C102.599 1.21401 103.484 1.66405 104.168 2.35397C104.851 3.04388 105.297 3.93716 105.44 4.90218C106.366 11.1698 106.508 25.8661 91.949 40.5625Z"
+                  fill="#FFF5F2"></path>
+                <path
+                  d="M85.5408 47.0322V83.9493C85.5408 84.5499 85.4236 85.1447 85.1959 85.6997C84.9681 86.2546 84.6344 86.7589 84.2136 87.1836L65.895 105.675C65.3151 106.26 64.5886 106.676 63.7931 106.877C62.9976 107.079 62.1628 107.058 61.3779 106.818C60.5929 106.578 59.8872 106.128 59.3359 105.515C58.7846 104.902 58.4085 104.15 58.2477 103.338L53.5 79.3753"
+                  fill="#B47EFE"></path>
+                <path
+                  d="M59.9081 21.1558H23.336C22.741 21.1558 22.1518 21.2741 21.602 21.5039C21.0522 21.7338 20.5527 22.0707 20.132 22.4955L1.81338 40.9868C1.23344 41.5723 0.821779 42.3056 0.622289 43.1086C0.4228 43.9116 0.442966 44.7543 0.680634 45.5466C0.918302 46.339 1.36456 47.0514 1.97182 47.6078C2.57909 48.1643 3.32458 48.544 4.12881 48.7063L27.8673 53.4988"
+                  fill="#B47EFE"></path>
+              </svg>
+            </div>
+          </div><!-- /.hero-text -->
+          <div class="hero-outro flex flex-row justify-between self-end pb-6">
+            <div>branding, websites & content</div>
+            <div class="hidden md:block">currently in: The Netherlands</div>
+          </div><!-- /.hero-outro -->
+        </div>
+        <canvas class="orb-canvas absolute top-0 left-0 z-10 hidden md:block"></canvas>
+      </div><!-- /.hero -->
+    </section><!-- /.container-hero -->
+    <section class="intro mx-auto max-w-screen-xl px-4 py-16 md:px-8 lg:px-16 lg:pb-32">
+      <div class="wrap">
+        <p class="intro-text">
+          Wij helpen missiegedreven bedrijven bij het bouwen van een sterk merk. Met creativiteit,
+          technologie, strategie en design brengen we jouw levensmissie tot uiting in branding,
+          websites en content. Ready for take-off?
+        </p>
+      </div><!-- /.wrap-intro -->
+    </section><!-- /.intro -->
+    <section class="projects mx-auto max-w-screen-xl px-4 pb-16 md:px-8 lg:px-16 lg:pb-32">
+      <h3 class="mb-2 py-4 font-jost text-xl">featured projects</h3>
+      <div class="projects-grid grid space-y-12 md:grid-cols-2 md:gap-x-8 md:space-y-0 lg:gap-x-24">
+        <Card
+          title="Tess Verhees"
+          description="branding, website"
+          src=""
+          alt="Project Thumbnail Tess Verhees"
+          href="#"
+          mtop="#"
+        />
+        <Card
+          title="Vivaz"
+          description="branding, website"
+          src=""
+          alt="Project Thumbnail Vivaz"
+          href="#"
+          mtop="md:mt-12 lg:mt-16"
+        />
+        <Card
+          title="Elements Concept Interior"
+          description="webdesign, development, ecommerce"
+          src=""
+          alt="Project Thumbnail Elements Concept Interior"
+          href="#"
+          mtop="#"
+        />
+        <Card
+          title="Willemsen Iso"
+          description="branding, website, copywriting"
+          src=""
+          alt="Project Thumbnail Willemsen Iso"
+          href="#"
+          mtop="md:mt-12 lg:mt-16"
+        />
+      </div><!-- /.projects-grid -->
+    </section><!-- /.projects -->
+    <section class="pinky-promises w-full rounded-4xl bg-md-lilac-100 py-16 lg:py-32">
+      <div class="wrap mx-auto max-w-screen-xl">
+        <h3 class="mb-2 py-4 px-4 font-jost text-xl md:px-8 lg:px-16">pinky promises</h3>
+        <div
+          class="pinky-grid grid grid-cols-[83.33vw_83.33vw_83.33vw] gap-x-4 overflow-x-auto px-4 pb-6 md:grid-cols-[58.33vw_58.33vw_58.33vw] md:gap-x-8 lg:grid-cols-3 lg:gap-x-8 lg:px-16"
+        >
+          <Pinky
+            heading="Connectie"
+            paragraph="Creëer een diepe connectie met je doelgroep door het vertellen van jouw unieke verhaal"
+            src=""
+            alt="#"
+          />
+          <Pinky heading="Impact" paragraph="Om impact te maken mag je opvallen" src="" alt="#" />
+          <Pinky
+            heading="Aandacht"
+            paragraph="Aandacht voor jou: intiem en persoonlijk samenwerken met direct contact "
+            src=""
+            alt="#"
+          />
+        </div><!-- /.pinky-grid -->
+      </div>
+    </section><!-- /.pinky-promises -->
+    <section class="quote mx-auto max-w-screen-xl py-16 px-4 md:px-8 lg:px-16 lg:py-32">
+      <h3 class="quote-text">
+        *<br /> Een sterke strategie: dat is ons startpunt. Vanuit daar bouwen we verder. Een merk dat
+        raakt, verbindt, transformeert, opvalt en converteert.
+      </h3>
+    </section><!-- /.quote -->
+  </main>
+</Standard>
+
+<script>
+  const smallDevice = window.matchMedia('(max-width: 478px)');
+
+  // smallDevice.addListener(handleDeviceChange);
+
+  function handleDeviceChange(e: any) {
+    if (e.matches)
+      document.getElementById('container-hero')!.style.height = window.innerHeight + 'px';
+    else document.getElementById('container-hero')!.style.height = '100vh';
+  }
+
+  // // Run it initially
+  handleDeviceChange(smallDevice);
+</script>
+<script defer type="module">
+  import * as PIXI from 'https://cdn.skypack.dev/pixi.js@6.5.3';
+  import { KawaseBlurFilter } from 'https://cdn.skypack.dev/@pixi/filter-kawase-blur';
+  import SimplexNoise from 'https://cdn.skypack.dev/simplex-noise@3.0.0';
+  import debounce from 'https://cdn.skypack.dev/debounce';
+
+  // return a random number within a range
+  function random(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  // map a number from 1 range to another
+  function map(n, start1, end1, start2, end2) {
+    return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
+  }
+
+  // Create a new simplex noise instance
+  const simplex = new SimplexNoise();
+
+  // Orb class
+  class Orb {
+    // Pixi takes hex colors as hexidecimal literals (0x rather than a string with '#')
+    constructor(fill = 0x000000) {
+      // bounds = the area an orb is "allowed" to move within
+      this.bounds = this.setBounds();
+      // initialise the orb's { x, y } values to a random point within it's bounds
+      this.x = random(this.bounds['x'].min, this.bounds['x'].max);
+      this.y = random(this.bounds['y'].min, this.bounds['y'].max);
+
+      // how large the orb is vs it's original radius (this will modulate over time)
+      this.scale = 1;
+
+      // what color is the orb?
+      this.fill = fill;
+
+      // the original radius of the orb, set relative to window height
+      this.radius = random(window.innerHeight / 1.6, window.innerHeight / 1.6);
+
+      // starting points in "time" for the noise/self similar random values
+      this.xOff = random(0, 500);
+      this.yOff = random(0, 500);
+      // how quickly the noise/self similar random values step through time
+      this.inc = random(0.0003, 0.0003);
+
+      // PIXI.Graphics is used to draw 2d primitives (in this case a circle) to the canvas
+      this.graphics = new PIXI.Graphics();
+      this.graphics.alpha = 0.825;
+
+      // 250ms after the last window resize event, recalculate orb positions.
+      window.addEventListener(
+        'resize',
+        debounce(() => {
+          this.bounds = this.setBounds();
+        }, 250)
+      );
+    }
+
+    setBounds() {
+      // how far from the { x, y } origin can each orb move
+      const maxDist = window.innerWidth < 1000 ? window.innerWidth / 5 : window.innerWidth / 4;
+      // the { x, y } origin for each orb (the bottom right of the screen)
+      const originX = random(window.innerWidth / 2, window.innerHeight / 2);
+      const originY = random(window.innerWidth / 2, window.innerHeight / 2);
+      // const originX = window.innerWidth / 2;
+
+      // allow each orb to move x distance away from it's x / y origin
+      return {
+        x: {
+          min: originX - maxDist,
+          max: originX + maxDist,
+        },
+        y: {
+          min: originY - maxDist,
+          max: originY + maxDist,
+        },
+      };
+    }
+
+    update() {
+      // self similar "psuedo-random" or noise values at a given point in "time"
+      const xNoise = simplex.noise2D(this.xOff, this.xOff);
+      const yNoise = simplex.noise2D(this.yOff, this.yOff);
+      const scaleNoise = simplex.noise2D(this.xOff, this.yOff);
+
+      // map the xNoise/yNoise values (between -1 and 1) to a point within the orb's bounds
+      this.x = map(xNoise, -1, 1, this.bounds['x'].min, this.bounds['x'].max);
+      this.y = map(yNoise, -1, 1, this.bounds['y'].min, this.bounds['y'].max);
+      // map scaleNoise (between -1 and 1) to a scale value somewhere between half of the orb's original size, and 100% of it's original size
+      this.scale = map(scaleNoise, -1, 1, 0.5, 1);
+
+      // step through "time"
+      this.xOff += this.inc;
+      this.yOff += this.inc;
+    }
+
+    render() {
+      // update the PIXI.Graphics position and scale values
+      this.graphics.x = this.x;
+      this.graphics.y = this.y;
+      this.graphics.scale.set(this.scale);
+
+      // clear anything currently drawn to graphics
+      this.graphics.clear();
+
+      // tell graphics to fill any shapes drawn after this with the orb's fill color
+      this.graphics.beginFill(this.fill);
+      // draw a circle at { 0, 0 } with it's size set by this.radius
+      this.graphics.drawCircle(0, 0, this.radius);
+      // let graphics know we won't be filling in any more shapes
+      this.graphics.endFill();
+    }
+  }
+
+  // Create PixiJS app
+  const app = new PIXI.Application({
+    // render to <canvas class="orb-canvas"></canvas>
+    view: document.querySelector('.orb-canvas'),
+    // auto adjust size to fit the current window
+    resizeTo: window,
+    // transparent background, we will be creating a gradient background later using CSS
+    backgroundAlpha: 0,
+  });
+
+  // first value: blur, second: quality, third: clamp(true or false)
+  app.stage.filters = [new KawaseBlurFilter(40, 20, true)];
+
+  // An array that holds all the colors
+  const colorChoices = ['0xFBC3B4', '0xC79EFE', '0xA3ACDD', '0xE0E3F4', '0xE2D1F9', '0xC79EFE'];
+
+  // Create orbs
+  const orbs = [];
+
+  for (let i = 0; i < colorChoices.length; i++) {
+    const orb = new Orb(colorChoices[i]);
+    app.stage.addChild(orb.graphics);
+    orbs.push(orb);
+  }
+
+  console.log(orbs);
+
+  // Animate!
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    app.ticker.add(() => {
+      orbs.forEach((orb) => {
+        orb.update();
+        orb.render();
+      });
+    });
+  } else {
+    orbs.forEach((orb) => {
+      orb.update();
+      orb.render();
+    });
+  }
+</script>

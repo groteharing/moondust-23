@@ -1,0 +1,74 @@
+---
+import Standard from '../layouts/standard.astro';
+import Card from '../components/card.astro';
+import '../styles/base.css';
+---
+
+<Standard title="Studio Moondust - Werk" h1="Werk">
+  <main>
+    <section class="hero px-4 pt-40 pb-16 font-jost md:pt-40 md:pb-24 lg:pt-56 lg:pb-36">
+      <div class="hero-text">
+        <h2>Een paar fantastische projecten waar we aan hebben gewerkt</h2>
+      </div>
+    </section><!-- /.hero -->
+    <section class="projects mx-auto max-w-screen-xl px-4 md:px-8 lg:px-16">
+      <h3 class="mb-2 py-4 font-jost text-xl">featured projects</h3>
+      <div class="projects-grid grid space-y-12 md:grid-cols-2 md:gap-x-8 md:space-y-0 lg:gap-x-24">
+        <Card
+          title="Tess Verhees"
+          description="branding, website"
+          src=""
+          alt="Project Thumbnail Tess Verhees"
+          href="#"
+          mtop="#"
+        />
+        <Card
+          title="Vivaz"
+          description="branding, website"
+          src=""
+          alt="Project Thumbnail Vivaz"
+          href="#"
+          mtop="md:mt-12 lg:mt-16"
+        />
+        <Card
+          title="Elements Concept Interior"
+          description="webdesign, development, ecommerce"
+          src=""
+          alt="Project Thumbnail Elements Concept Interior"
+          href="#"
+          mtop="#"
+        />
+        <Card
+          title="Willemsen Iso"
+          description="branding, website, copywriting"
+          src=""
+          alt="Project Thumbnail Willemsen Iso"
+          href="#"
+          mtop="md:mt-12 lg:mt-16"
+        />
+        <Card
+          title="Tess Verhees"
+          description="branding, website"
+          src=""
+          alt="Project Thumbnail Tess Verhees"
+          href="#"
+          mtop="#"
+        />
+        <Card
+          title="Vivaz"
+          description="branding, website"
+          src=""
+          alt="Project Thumbnail Vivaz"
+          href="#"
+          mtop="md:mt-12 lg:mt-16"
+        />
+      </div><!-- /.projects-grid -->
+    </section><!-- /.projects -->
+    <section class="quote mx-auto max-w-screen-xl py-16 px-4 md:px-8 md:pt-24 lg:px-16 lg:pb-32">
+      <h3 class="quote-text">
+        *<br /> Wat al deze mensen gemeen hebben: blablabla. We gaan lekker op onze values. Jij ook?
+        Neem contact op JOW
+      </h3>
+    </section><!-- /.quote -->
+  </main>
+</Standard>

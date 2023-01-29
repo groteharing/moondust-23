@@ -1,0 +1,168 @@
+---
+import Standard from '../layouts/standard.astro';
+import Mdwork from '../components/mdwork.astro';
+import '../styles/base.css';
+---
+
+<Standard title="Studio Moondust - Over" h1="Over">
+  <main>
+    <section
+      id="container-hero"
+      class="hero px-4 pt-40 pb-16 font-jost md:pt-40 md:pb-24 lg:pt-56 lg:pb-36"
+    >
+      <div class="hero-text">
+        <h2>Slow design en positieve veranderingen</h2>
+      </div>
+    </section><!-- /.container-hero -->
+    <section class="img-divider md:px-4">
+      <div
+        class="img-wrap flex aspect-[0.85] w-full items-center justify-center overflow-hidden rounded-3xl bg-md-grey md:aspect-[2]"
+      >
+        <img src="object-cover" alt="#" />
+      </div>
+    </section><!-- /.img-divider -->
+    <section class="intro mx-auto max-w-screen-xl px-4 py-16 md:px-8 lg:px-16 lg:py-32">
+      <div class="wrap">
+        <p class="intro-text">
+          Een klein team van experts, vastberaden om de levensmissie van bedrijven tot uiting te
+          brengen. Terwijl we de wereld over reizen helpen wij ondernemers, bedrijven en merken bij
+          het vergroten van hun impact met branding, websites en content
+        </p>
+      </div><!-- /.wrap-intro -->
+    </section><!-- /.intro -->
+    <section class="werken-met-ons mx-auto max-w-screen-xl px-4 pb-16 md:px-8 lg:px-16 lg:pb-24">
+      <h3 class="">Zo ziet werken met ons eruit</h3>
+      <div class="flex flex-col space-y-16 md:space-y-24 lg:space-y-32">
+        <Mdwork
+          heading="Less bureaucracy, more creativity"
+          paragraph="Wij zijn een micro-agency: samen met onze branche experts (ook wel: freelancers) gaan we tot het uiterste. Door het speciaal opgestelde projectteam krijg je de kwaliteit van een agency, maar dan zonder ruis. Menselijk, intiem en helder."
+          src=""
+          alt="#"
+          ordertext="order-2 md:order-1"
+          orderimg="order-1 md:order-2"
+        />
+        <Mdwork
+          heading="Remote working"
+          paragraph="En dat betekent niet je laptop openklappen op het eerste strand. Wij werken op de tijd en plaats waar we het meest productief en creatief zijn. Dat is de norm. Creativiteit is leidend en onze proces zijn effectief en ... online."
+          src=""
+          alt="#"
+          ordertext="order-2"
+          orderimg="order-1"
+        />
+        <Mdwork
+          heading="Infinite creative freedom"
+          paragraph="Werken vanuit vrijheid zorgt voor optimale creativiteit, productiviteit en werkgeluk. Dat is waar wij op floreren. We werken samen in vertrouwen en op basis van output. En die output? Die raakt, resoneert, verbindt en converteert."
+          src=""
+          alt="#"
+          ordertext="order-2 md:order-1"
+          orderimg="order-1 md:order-2"
+        />
+      </div><!-- /.about-grid -->
+    </section><!-- /.about -->
+    <section
+      class="services-short-wrap mx-auto max-w-screen-xl px-4 pb-16 md:px-8 md:py-16 lg:px-16 lg:pb-32"
+    >
+      <div
+        class="services-grid grid grid-flow-row gap-8 md:grid-flow-col md:text-center [&>*]:flex [&>*]:flex-col"
+      >
+        <div>
+          <h3 class="services-short bg-gradient-to-r from-md-lilac-400 to-md-flamingo-400">
+            branding
+          </h3>
+          <p>brandbook - strategy - logo design</p>
+        </div>
+        <div>
+          <h3 class="services-short bg-gradient-to-l from-md-astronaut-400 to-md-flamingo-200">
+            websites
+          </h3>
+          <p>design - development - interaction</p>
+        </div>
+        <div>
+          <h3 class="services-short bg-gradient-to-tl from-md-lilac-400 to-md-astronaut-300">
+            content
+          </h3>
+          <p>socials - strategy - visuals</p>
+        </div>
+      </div>
+    </section><!-- /.services-short -->
+    <section class="partners mx-auto max-w-screen-xl px-4 pb-16 md:px-8 lg:px-16 lg:pb-32">
+      <h3>Meet the partners</h3>
+      <div class="grid grid-flow-row gap-12 md:grid-flow-col md:grid-cols-2">
+        <div class="flex flex-col space-y-6">
+          <div
+            class="img-wrap flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-md-lilac-100 md:aspect-[1.5]"
+          >
+            <img src="" alt="#" />
+          </div>
+          <div class="text-wrap px-2">
+            <h4>Tess</h4>
+            <p>communicatie - creative copywriter - sales psychologie</p>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-6">
+          <div
+            class="img-wrap flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-md-lilac-100 md:aspect-[1.5]"
+          >
+            <img src="" alt="#" />
+          </div>
+          <div class="text-wrap">
+            <h4>Pim</h4>
+            <p>web designer - front-end developer - technology expert</p>
+          </div>
+        </div>
+      </div><!-- /.partners-grid -->
+    </section><!-- /.partners -->
+    <section class="groeiformule mx-auto max-w-screen-xl px-4 pb-16 md:px-8 lg:px-16 lg:pb-32">
+      <h3>Onze groeiformule</h3>
+      <div
+        class="md:grid-col-2 grid grid-flow-row gap-8 md:grid-flow-row md:grid-cols-2 md:gap-x-24 md:gap-y-16 [&_h4]:font-gangster [&_h4]:text-xl [&_h4]:font-light"
+      >
+        <div class="flex flex-col space-y-2">
+          <h4>1. Je motivatie maakt het verschil</h4>
+          <p>
+            Wij helpen bedrijven die vanuit een diepe innerlijke drijfveer met hun bedrijf zijn
+            gestart. Niet enkel gericht op winst, maar op positieve verandering. Werken vanuit
+            passie.
+          </p>
+        </div>
+        <div class="flex flex-col space-y-2">
+          <h4>2. Kom opvallen met ons</h4>
+          <p>
+            Het verschil maken doe je niet door mediocre te zijn. Om impact te maken mag je
+            opvallen. Erbovenuit steken; met kop en schouders. Kom groeien en opvallen met ons.
+          </p>
+        </div>
+        <div class="flex flex-col space-y-2">
+          <h4>3. De kracht van verhalen is oneindig</h4>
+          <p>
+            Iedereen heeft een verhaal. Het vertellen van jouw verhaal - met de juiste woorden en
+            beelden - zorgt voor een diepe connectie met je doelgroep. Laat je kennen.
+          </p>
+        </div>
+        <div class="flex flex-col space-y-2">
+          <h4>4. Kennis en kunde</h4>
+          <p>
+            We weten wat we kunnen, en ook wat niet. Om die reden werken we samen met branche
+            experts. Ieder zijn specialiteit voor een fantastisch eindresultaat.
+          </p>
+        </div>
+      </div>
+    </section><!-- /.groeiformule -->
+    <section class="gingen-je-voor mx-auto max-w-screen-xl px-4 pb-16 md:px-8 lg:px-16 lg:pb-32">
+      <h3>Zij gingen je voor</h3>
+      <ul
+        class="grid grid-flow-row gap-x-10 font-jost text-lg font-medium md:grid-cols-2 [&>li]:border-b-[1px] [&>li]:border-gray-200 [&>li]:py-4 [&>li]:md:py-6"
+      >
+        <li>Elements Concept Interior</li>
+        <li>Sams Coaching</li>
+        <li>Vivaz</li>
+        <li>By E</li>
+        <li>ITIP School voor leven en werk</li>
+        <li>Willemsen Isolatiebouw</li>
+        <li>Vos Advies</li>
+        <li>The Whisky Guide</li>
+        <li>Tess Verhees</li>
+      </ul>
+    </section><!-- /.gingen je voor -->
+  </main>
+</Standard>
