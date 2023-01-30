@@ -7,7 +7,7 @@
 
   --font-size-xs: 14;
   --font-size-sm: 16;
-  --font-size-base: calc((18 / 16) * 1rem);
+  --font-size-base: calc((17 / 16) * 1rem);
   --font-size-lg: calc(var(--font-size-base) * var(--ratio));
   --font-size-xl: calc(var(--font-size-lg) * var(--ratio));
   --font-size-2xl: calc(var(--font-size-xl) * var(--ratio));
