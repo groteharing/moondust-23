@@ -80,11 +80,11 @@ a:hover {
 }
 
 .intro-text {
-  @apply font-jost text-2xl font-light leading-md-3 tracking-md-0 lg:text-3xl;
+  @apply max-w-5xl font-jost text-xl font-light leading-md-3 tracking-md-0 md:text-2xl;
 }
 
 .quote-text {
-  @apply font-gangster text-3xl font-light leading-md-1 lg:text-6xl;
+  @apply font-gangster text-3xl font-light leading-md-1 md:text-5xl lg:text-6xl;
 }
 
 .services-short {
