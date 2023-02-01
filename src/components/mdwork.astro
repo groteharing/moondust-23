@@ -20,10 +20,10 @@ const { heading, paragraph, src, alt, ordertext, orderimg } = Astro.props;
       {paragraph}
     </p>
   </div>
-  <div
+  <figure
     class={`img-wrap ${orderimg} flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-md-flamingo-100 md:aspect-[1.5]`}
   >
     <img src={src} alt={alt} />
-  </div>
+  </figure>
 </div>
 <!-- /.work-card -->

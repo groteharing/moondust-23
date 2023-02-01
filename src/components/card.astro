@@ -13,11 +13,11 @@ const { title, description, src, alt, href, mtop } = Astro.props;
 
 <a href={href} class="card-container">
   <div class={mtop}>
-    <div
+    <figure
       class="img-wrap flex aspect-[0.85] w-full items-center justify-center overflow-hidden rounded-4xl bg-md-flamingo-100"
     >
       <img class="object-cover" src={src} alt={alt} />
-    </div>
+    </figure>
     <div class="description py-1 px-2 pt-6">
       <h4>{title}</h4>
       <p>{description}</p>

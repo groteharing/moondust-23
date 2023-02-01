@@ -1,21 +1,55 @@
 ---
+import Nav from '../components/nav.astro';
+import Footer from '../components/footer.astro';
 export interface Props {
-	title: string;
+  title: string;
+  h1: string;
+  client: string;
+  services: string;
+  year: number;
+  url: string;
+  hero_url: string;
+  hero_alt: string;
+  headline: string;
+
+  s01_bg: string;
+  s01_img_true: string;
+  s01_jpg_url: string;
+  s01_jpg_alt: string;
+  s02_mp4_url: string;
+  s02_mp4_alt: string;
+  s02_img1_url: string;
+  s02_img1_alt: string;
+  s02_img2_url: string;
+  s02_img2_alt: string;
+  s02_img3_url: string;
+  s02_img3_alt: string;
+  s03_text: string;
+  s03_text_color: string;
+  s03_img_true: string;
+  s03_img_url: string;
+  s03_img_alt: string;
+  s04_mp4_url: string;
+  s04_mp4_alt: string;
+  next_project_url: string;
 }
 
-const { title } = Astro.props;
+const { title, h1 } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="font-gangster font-light">
+    <h1 class="sr-only">{h1}</h1>
+    <Nav />
+    <slot />
+    <Footer />
+  </body>
 </html>
