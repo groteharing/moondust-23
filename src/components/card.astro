@@ -2,13 +2,13 @@
 export interface Props {
   title: string;
   description: string;
-  src: string;
-  alt: string;
+  img_src: string;
+  img_alt: string;
   href: string;
   mtop: string;
 }
 
-const { title, description, src, alt, href, mtop } = Astro.props;
+const { title, description, img_src, img_alt, href, mtop } = Astro.props;
 ---
 
 <a href={href} class="card-container">
@@ -16,7 +16,7 @@ const { title, description, src, alt, href, mtop } = Astro.props;
     <figure
       class="img-wrap flex aspect-[0.85] w-full items-center justify-center overflow-hidden rounded-4xl bg-md-flamingo-100"
     >
-      <img class="object-cover" src={src} alt={alt} />
+      <img class="object-cover" src={img_src} alt={img_alt} />
     </figure>
     <div class="description py-1 px-2 pt-6">
       <h4>{title}</h4>

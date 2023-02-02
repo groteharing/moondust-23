@@ -76,7 +76,7 @@ a:hover {
 }
 
 .hero-text {
-  @apply self-center md:mx-auto md:max-w-6xl md:px-20 md:text-center;
+  @apply self-center sm:mx-auto sm:max-w-6xl sm:px-20 sm:text-center;
 }
 
 .intro-text {

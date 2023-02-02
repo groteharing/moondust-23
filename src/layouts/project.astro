@@ -3,38 +3,27 @@ import Nav from '../components/nav.astro';
 import Footer from '../components/footer.astro';
 export interface Props {
   title: string;
-  h1: string;
+  heading: string;
   client: string;
   services: string;
-  year: number;
-  url: string;
-  hero_url: string;
-  hero_alt: string;
+  year: string;
+  project_url: string;
+  hero_img_url: string;
+  hero_img_alt: string;
   headline: string;
-
-  s01_bg: string;
-  s01_img_true: string;
-  s01_jpg_url: string;
-  s01_jpg_alt: string;
-  s02_mp4_url: string;
-  s02_mp4_alt: string;
-  s02_img1_url: string;
-  s02_img1_alt: string;
-  s02_img2_url: string;
-  s02_img2_alt: string;
-  s02_img3_url: string;
-  s02_img3_alt: string;
-  s03_text: string;
-  s03_text_color: string;
-  s03_img_true: string;
-  s03_img_url: string;
-  s03_img_alt: string;
-  s04_mp4_url: string;
-  s04_mp4_alt: string;
-  next_project_url: string;
 }
 
-const { title, h1 } = Astro.props;
+const {
+  title,
+  heading,
+  client,
+  services,
+  year,
+  project_url,
+  hero_img_url,
+  hero_img_alt,
+  headline,
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -47,8 +36,69 @@ const { title, h1 } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="font-gangster font-light">
-    <h1 class="sr-only">{h1}</h1>
     <Nav />
+    <section
+      id="container-hero"
+      class="hero px-4 pt-40 pb-16 font-jost md:pt-40 md:pb-24 lg:pt-56 lg:pb-36"
+    >
+      <div class="hero-text">
+        <h1>{heading}</h1>
+      </div>
+      <div
+        class="hero-info mx-auto grid grid-flow-row gap-y-4 pt-16 sm:max-w-3xl sm:grid-flow-col sm:grid-cols-4 sm:justify-between sm:justify-items-center sm:gap-y-0 [&>*]:flex [&>*]:flex-col [&>*]:gap-y-2"
+      >
+        <div>
+          <p class="font-medium">bedrijf</p>
+          <p>{client}</p>
+        </div>
+        <div>
+          <p class="font-medium">services</p>
+          <p>{services}</p>
+        </div>
+        <div>
+          <p class="font-medium">year</p>
+          <p>{year}</p>
+        </div>
+        <div>
+          <p class="font-medium">website</p>
+          <a class="flex flex-row items-center" title={`open project ${client}`} href={project_url}>
+            launch website
+            <div class="ml-1 h-5 w-5">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11 8.07579V12.2783C11 12.8306 10.5523 13.2783 10 13.2783H4C3.44772 13.2783 3 12.8306 3 12.2783V6.27832C3 5.72604 3.44772 5.27832 4 5.27832H8.3999V4.27832H4C2.89543 4.27832 2 5.17375 2 6.27832V12.2783C2 13.3829 2.89543 14.2783 4 14.2783H10C11.1046 14.2783 12 13.3829 12 12.2783V8.07579H11Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M6.43743 8.4912C6.23717 8.68132 6.23717 8.98958 6.43743 9.1797C6.6377 9.36983 6.9624 9.36983 7.16266 9.1797L6.43743 8.4912ZM14.5129 2.00001C14.5129 1.73113 14.2833 1.51316 14 1.51316L9.38472 1.51316C9.1015 1.51316 8.87191 1.73113 8.87191 2.00001C8.87191 2.26888 9.1015 2.48685 9.38472 2.48685L13.4872 2.48685L13.4872 6.38165C13.4872 6.65052 13.7168 6.86849 14 6.86849C14.2833 6.86849 14.5129 6.65052 14.5129 6.38165L14.5129 2.00001ZM7.16266 9.1797L14.3627 2.34426L13.6374 1.65575L6.43743 8.4912L7.16266 9.1797Z"
+                  fill="currentColor"></path>
+              </svg>
+            </div><!-- end icon -->
+          </a><!-- end ./link -->
+        </div>
+      </div><!-- /.hero-info -->
+    </section><!-- /.container-hero -->
+    <section class="img-divider md:px-4">
+      <figure
+        class="img-wrap flex aspect-[0.85] w-full items-center justify-center overflow-hidden rounded-3xl bg-md-grey md:aspect-[2]"
+      >
+        <img class="object-cover" src={hero_img_url} alt={hero_img_alt} />
+      </figure>
+    </section><!-- /.img-divider -->
+    <section class="intro mx-auto max-w-screen-xl px-4 py-16 md:px-8 lg:px-16 lg:pb-32">
+      <div class="wrap">
+        <p class="intro-text">
+          {headline}
+        </p>
+      </div><!-- /.wrap-intro -->
+    </section><!-- /.intro -->
     <slot />
     <Footer />
   </body>
