@@ -8,7 +8,7 @@ export interface Props {
   services: string;
   year: string;
   project_url: string;
-  hero_img_url: string;
+  hero_img_src: string;
   hero_img_alt: string;
   headline: string;
 }
@@ -20,7 +20,7 @@ const {
   services,
   year,
   project_url,
-  hero_img_url,
+  hero_img_src,
   hero_img_alt,
   headline,
 } = Astro.props;
@@ -85,11 +85,11 @@ const {
         </div>
       </div><!-- /.hero-info -->
     </section><!-- /.container-hero -->
-    <section class="img-divider md:px-4">
+    <section class="img-divider mx-auto max-w-screen-2xl md:px-4">
       <figure
         class="img-wrap flex aspect-[0.85] w-full items-center justify-center overflow-hidden rounded-3xl bg-md-grey md:aspect-[2]"
       >
-        <img class="object-cover" src={hero_img_url} alt={hero_img_alt} />
+        <img class="object-cover" src={hero_img_src} alt={hero_img_alt} />
       </figure>
     </section><!-- /.img-divider -->
     <section class="intro mx-auto max-w-screen-xl px-4 py-16 md:px-8 lg:px-16 lg:pb-32">

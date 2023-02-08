@@ -1,0 +1,95 @@
+---
+export interface Props {
+  background: string;
+  vid_src: string;
+  vid_title: string;
+}
+
+const { background, vid_src, vid_title } = Astro.props;
+---
+
+<section class={`w-full rounded-4xl ${background} py-16 max-w-screen-2xl mx-auto lg:py-32`}>
+  <div class="ipad-container relative mx-auto flex max-w-4xl items-center justify-center">
+    <div class="ipad-frame z-20 mx-auto w-full">
+      <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 2120 1530"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3.5 1423C3.5 1481.27 50.734 1528.5 109 1528.5H2013C2071.27 1528.5 2118.5 1481.27 2118.5 1423V109C2118.5 50.7339 2071.27 3.5 2013 3.5H109C50.734 3.5 3.5 50.734 3.5 109V1423ZM113 1451.5C97.2599 1451.5 84.5 1438.74 84.5 1423V114C84.5 98.2599 97.2599 85.5 113 85.5H2016C2031.74 85.5 2044.5 98.2599 2044.5 114V1423C2044.5 1438.74 2031.74 1451.5 2016 1451.5H113Z"
+          fill="#2D2D2D"
+          stroke="#434343"
+          stroke-width="3"></path>
+        <g opacity="0.22">
+          <path
+            d="M0 213C0 215.761 2.23858 218 5 218V113C2.23858 113 0 115.239 0 118V213Z"
+            fill="url(#paint0_linear_1254_5236)"></path>
+          <path
+            d="M165 5C165 2.23857 167.239 0 170 0L249 0C251.761 0 254 2.23857 254 5H165Z"
+            fill="url(#paint1_linear_1254_5236)"></path>
+          <path
+            d="M271 5C271 2.23857 273.239 0 276 0H349C351.761 0 354 2.23857 354 5H271Z"
+            fill="url(#paint2_linear_1254_5236)"></path>
+        </g>
+        <defs>
+          <linearGradient
+            id="paint0_linear_1254_5236"
+            x1="-4.00031"
+            y1="215.143"
+            x2="-3.49004"
+            y2="112.998"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#313131"></stop>
+            <stop offset="0.140625" stop-color="#424242"></stop>
+            <stop offset="0.463542" stop-color="#4F4F4F"></stop>
+            <stop offset="0.875" stop-color="#424242"></stop>
+            <stop offset="1" stop-color="#313131"></stop>
+          </linearGradient>
+          <linearGradient
+            id="paint1_linear_1254_5236"
+            x1="-4.00031"
+            y1="215.143"
+            x2="-3.49004"
+            y2="112.998"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#313131"></stop>
+            <stop offset="0.140625" stop-color="#424242"></stop>
+            <stop offset="0.463542" stop-color="#4F4F4F"></stop>
+            <stop offset="0.875" stop-color="#424242"></stop>
+            <stop offset="1" stop-color="#313131"></stop>
+          </linearGradient>
+          <linearGradient
+            id="paint2_linear_1254_5236"
+            x1="-4.00031"
+            y1="215.143"
+            x2="-3.49004"
+            y2="112.998"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#313131"></stop>
+            <stop offset="0.140625" stop-color="#424242"></stop>
+            <stop offset="0.463542" stop-color="#4F4F4F"></stop>
+            <stop offset="0.875" stop-color="#424242"></stop>
+            <stop offset="1" stop-color="#313131"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div><!-- /.ipad-frame -->
+    <video
+      class="absolute z-0 h-[90%] w-[93%] bg-slate-200 object-cover"
+      src={vid_src}
+      muted
+      autoplay
+      playsinline
+      loop
+    >
+      <source src={vid_src} type="video/mp4" />
+    </video>
+  </div>
+</section>
+<!-- /.ipad-container -->

@@ -1,0 +1,26 @@
+---
+export interface Props {
+  background: string;
+  vid_src: string;
+  vid_title: string;
+}
+
+const { background, vid_src, vid_title } = Astro.props;
+---
+
+<section class="mx-auto w-full max-w-screen-2xl py-16 lg:py-32">
+  <div class="ipad-container relative mx-auto flex max-w-4xl items-center justify-center">
+    <div class="ipad-frame z-20 mx-auto w-full"></div><!-- /.ipad-frame -->
+    <video
+      class="absolute z-0 h-[90%] w-[93%] bg-slate-200 object-cover"
+      src={vid_src}
+      muted
+      autoplay
+      playsinline
+      loop
+    >
+      <source src={vid_src} type="video/mp4" />
+    </video>
+  </div>
+</section>
+<!-- /.ipad-container -->
