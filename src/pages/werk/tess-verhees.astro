@@ -1,25 +1,33 @@
 ---
-import Project from '../../layouts/project.astro';
+import Standard from '../../layouts/standard.astro';
 import '../../styles/base.css';
+import Hero from '../../components/werk/hero.astro';
+import Hero_img from '../../components/werk/hero_img.astro';
+import Headline from '../../components/werk/headline.astro';
 import Ipad from '../../components/werk/ipad.astro';
+import Mobile from '../../components/werk/mobile_3.astro';
 ---
 
-<Project
-  title="Werk - Tess Verhees"
-  heading="Een nieuw portfolio en webshop in één"
-  client="Tess Verhees"
-  services="branding, website"
-  year="2022"
-  project_url="www.tessverhees.nl"
-  hero_img_src="/werk/tess/teddy-hero-img-min.jpg"
-  hero_img_alt="#"
-  headline="Nunc quis tempor purus, eu pellentesque risus. Praesent vitae mauris augue. Maecenas vel augue rhoncus risus dapibus tempus. Nunc at egestas lacus. Morbi at lorem dolor."
+<Standard
+  title="Studio Moondust"
+  h1="Studio Moondust"
+  description="#"
+  keywords="#"
+  og_img_url="#"
+  og_img_alt="#"
+  og_site_name="#"
 >
+  <Hero
+    heading="Een nieuw portfolio en webshop in één"
+    client="Tess Verhees"
+    services="branding, website"
+    year="2022"
+    project_url="www.tessverhees.nl"
+  />
+  <Hero_img hero_img_src="/werk/tess/teddy-hero-img-min.jpg" hero_img_alt="#" />
+  <Headline
+    headline="Nunc quis tempor purus, eu pellentesque risus. Praesent vitae mauris augue. Maecenas vel augue rhoncus risus dapibus tempus. Nunc at egestas lacus. Morbi at lorem dolor."
+  />
   <Ipad background="bg-md-lilac-100" vid_src="/werk/tess/vid-teddy-ipad.mp4" vid_title="#" />
-  <section class="quote mx-auto max-w-screen-xl py-16 px-4 md:px-8 md:pt-24 lg:px-16 lg:pb-32">
-    <h3 class="quote-text">
-      *<br /> Wat al deze mensen gemeen hebben: blablabla. We gaan lekker op onze values. Jij ook? Neem
-      contact op JOW
-    </h3>
-  </section><!-- /.quote -->
-</Project>
+  <Mobile vid_src="" vid_title="" img1_src="" img1_alt="" img2_src="" img2_alt="" />
+</Standard>

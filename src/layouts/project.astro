@@ -1,19 +1,13 @@
 ---
 import Nav from '../components/nav.astro';
 import Footer from '../components/footer.astro';
-export interface Props {
-  title: string;
-  heading: string;
-  client: string;
-  services: string;
-  year: string;
-  project_url: string;
-  hero_img_src: string;
-  hero_img_alt: string;
-  headline: string;
-}
 
 const {
+  description,
+  keywords,
+  og_url,
+  og_img_url,
+  og_site_name,
   title,
   heading,
   client,
@@ -29,11 +23,19 @@ const {
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>{title}</title>
     <meta charset="UTF-8" />
+    <meta name="keywords" content={keywords} />
+    <meta name="description" content={description} />
+    <meta name="language" content="NL" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+
+    <meta name="og:title" content={title} />
+    <meta name="og:url" content={og_url} />
+    <meta name="og:image" content={og_img_url} />
+    <meta name="og:site_name" content={og_site_name} />
+    <meta name="og:description" content={description} />
   </head>
   <body class="font-gangster font-light">
     <Nav />
