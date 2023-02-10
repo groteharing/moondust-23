@@ -1,0 +1,18 @@
+---
+const { vid_src, vid_title } = Astro.props;
+---
+
+<section class="img-divider mx-auto max-w-screen-2xl px-4 py-16 md:px-8 lg:pb-32">
+  <div class="mx-auto max-w-6xl overflow-hidden rounded-lg shadow-lg">
+    <video
+      class="min-h-full min-w-full object-cover"
+      title={vid_title}
+      muted
+      autoplay
+      playsinline
+      loop
+    >
+      <source src={vid_src} type="video/mp4" />
+    </video>
+  </div>
+</section>

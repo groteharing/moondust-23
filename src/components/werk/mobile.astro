@@ -1,0 +1,28 @@
+---
+const { vid_src, vid_title, img1_src, img1_title, img2_src, img2_title } = Astro.props;
+---
+
+<section class="img-divider mx-auto max-w-screen-2xl px-12 py-16 md:px-8 lg:py-32">
+  <div
+    class="img-grid mx-auto grid max-w-5xl grid-flow-row gap-8 md:grid-flow-col md:grid-cols-3 md:gap-16 lg:gap-24 [&>*]:aspect-[9/19] [&>*]:overflow-hidden [&>*]:rounded-3xl [&>*]:shadow-lg"
+  >
+    <div>
+      <video
+        class="min-h-full min-w-full object-cover"
+        title={vid_title}
+        muted
+        autoplay
+        playsinline
+        loop
+      >
+        <source src={vid_src} type="video/mp4" />
+      </video>
+    </div>
+    <div>
+      <img class="min-h-full min-w-full object-cover" src={img1_src} alt={img1_title} />
+    </div>
+    <div>
+      <img class="min-h-full min-w-full object-cover" src={img2_src} alt={img2_title} />
+    </div>
+  </div>
+</section>

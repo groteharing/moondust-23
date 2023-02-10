@@ -19,14 +19,14 @@
   --font-size-8xl: calc(var(--font-size-7xl) * var(--ratio));
   --font-size-9xl: calc(var(--font-size-8xl) * var(--ratio));
 
-  --line-height-0: calc(var(--line-height-1) / 1.2);
-  --line-height-1: calc(var(--line-height-2) / 1.2);
-  --line-height-2: calc(var(--line-height-3) / 1.2);
-  --line-height-3: calc(var(--line-height-4) / 1.2);
+  --line-height-0: 0.9;
+  --line-height-1: 1.1;
+  --line-height-2: 1.2;
+  --line-height-3: 1.5;
   --line-height-4: 1.8;
-  --line-height-5: calc(var(--line-height-4) * 1.2);
-  --line-height-6: calc(var(--line-height-5) * 1.2);
-  --line-height-7: calc(var(--line-height-6) * 1.2);
+  --line-height-5: 1.9;
+  --line-height-6: 2;
+  --line-height-7: 2.2;
 
   --letter-spacing-1: -0.01em;
   --letter-spacing-2: -0.015em;

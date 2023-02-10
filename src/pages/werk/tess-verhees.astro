@@ -5,7 +5,9 @@ import Hero from '../../components/werk/hero.astro';
 import Hero_img from '../../components/werk/hero_img.astro';
 import Headline from '../../components/werk/headline.astro';
 import Ipad from '../../components/werk/ipad.astro';
-import Mobile from '../../components/werk/mobile_3.astro';
+import Mobile from '../../components/werk/mobile.astro';
+import Img from '../../components/werk/img.astro';
+import Desktop from '../../components/werk/desktop.astro';
 ---
 
 <Standard
@@ -24,10 +26,24 @@ import Mobile from '../../components/werk/mobile_3.astro';
     year="2022"
     project_url="www.tessverhees.nl"
   />
-  <Hero_img hero_img_src="/werk/tess/teddy-hero-img-min.jpg" hero_img_alt="#" />
+  <Hero_img hero_img_src="/werk/tess/teddy-hero-og.webp" hero_img_alt="#" />
   <Headline
     headline="Nunc quis tempor purus, eu pellentesque risus. Praesent vitae mauris augue. Maecenas vel augue rhoncus risus dapibus tempus. Nunc at egestas lacus. Morbi at lorem dolor."
   />
-  <Ipad background="bg-md-lilac-100" vid_src="/werk/tess/vid-teddy-ipad.mp4" vid_title="#" />
-  <Mobile vid_src="" vid_title="" img1_src="" img1_alt="" img2_src="" img2_alt="" />
+  <Ipad background="bg-[#FFF9F0]" vid_src="/werk/tess/vid-teddy-ipad.mp4" vid_title="#" />
+  <Mobile
+    vid_src="/werk/tess/vid-teddy-mobile.mp4"
+    vid_title="ipad screencapture website teddy"
+    img1_src="/werk/tess/teddy-mobile-2.webp"
+    img1_alt=""
+    img2_src="/werk/tess/teddy-mobile-3.webp"
+    img2_alt=""
+  />
+  <Img img_src="/werk/tess/teddy-section-img-bg.webp" img_alt="#" />
+  <Desktop vid_src="/werk/tess/vid-teddy-desktop.mp4" vid_title="#" />
+  <section class="quote mx-auto max-w-screen-xl py-16 px-4 md:px-8 lg:px-16 lg:py-32">
+    <div class="pagination quote-text flex w-full items-center justify-center gap-4 sm:gap-12">
+      <a href="../werk">< werk</a> / <a href="#"> next ></a>
+    </div><!-- /.quote -->
+  </section>
 </Standard>
