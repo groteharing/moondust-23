@@ -6,7 +6,7 @@ const { img_src, img_alt } = Astro.props;
   <figure
     class="img-wrap flex aspect-[0.85] w-full items-center justify-center overflow-hidden rounded-3xl md:aspect-[2]"
   >
-    <img class="min-h-full min-w-full object-cover" src={img_src} alt={img_alt} />
+    <img class="h-full w-full max-w-full object-cover" src={img_src} alt={img_alt} />
   </figure>
 </section>
 <!-- /.img-divider -->
