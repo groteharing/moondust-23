@@ -2,9 +2,9 @@
 const { img_src, img_alt } = Astro.props;
 ---
 
-<section class="img-divider mx-auto max-w-screen-2xl pb-16 lg:pb-32">
+<section class="img-divider mx-auto max-w-screen-2xl py-16 lg:pb-32">
   <figure
-    class="img-wrap flex aspect-[0.85] w-full items-center justify-center overflow-hidden rounded-3xl md:aspect-[2]"
+    class="img-wrap flex aspect-square w-full items-center justify-center overflow-hidden rounded-3xl md:aspect-[2]"
   >
     <img class="h-full w-full max-w-full object-cover" src={img_src} alt={img_alt} />
   </figure>

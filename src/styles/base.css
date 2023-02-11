@@ -20,7 +20,7 @@
   --font-size-9xl: calc(var(--font-size-8xl) * var(--ratio));
 
   --line-height-0: 0.9;
-  --line-height-1: 1.1;
+  --line-height-1: 1;
   --line-height-2: 1.2;
   --line-height-3: 1.5;
   --line-height-4: 1.8;

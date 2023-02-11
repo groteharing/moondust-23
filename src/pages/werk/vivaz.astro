@@ -1,0 +1,49 @@
+---
+import Standard from '../../layouts/standard.astro';
+import '../../styles/base.css';
+import Hero from '../../components/werk/hero.astro';
+import Hero_img from '../../components/werk/hero_img.astro';
+import Headline from '../../components/werk/headline.astro';
+import Ipad from '../../components/werk/ipad.astro';
+import Mobile from '../../components/werk/mobile.astro';
+import Img from '../../components/werk/img.astro';
+import Desktop from '../../components/werk/desktop.astro';
+---
+
+<Standard
+  title="Studio Moondust Werk"
+  h1="Vivaz Coaching website & branding"
+  description="#"
+  keywords="#"
+  og_img_url="/werk/vivaz/vivaz-hero-OG.webp"
+  og_img_alt="#"
+  og_site_name="Studio Moondust"
+>
+  <Hero
+    heading="Een nieuwe look voor Vivaz Coaching Nijmegen"
+    client="Vivaz"
+    services="branding, website"
+    year="2022"
+    project_url="www.vivaz.nl"
+  />
+  <Hero_img hero_img_src="/werk/vivaz/vivaz-hero-OG.webp" hero_img_alt="#" />
+  <Headline
+    headline="Nunc quis tempor purus, eu pellentesque risus. Praesent vitae mauris augue. Maecenas vel augue rhoncus risus dapibus tempus. Nunc at egestas lacus. Morbi at lorem dolor."
+  />
+  <Ipad background="bg-[#FFF8F8]" vid_src="/werk/vivaz/vid-vivaz-ipad.mp4" vid_title="#" />
+  <Mobile
+    vid_src="/werk/vivaz/vid-vivaz-mobile.mp4"
+    vid_title="ipad screencapture website teddy"
+    img1_src="/werk/vivaz/vivaz-mobile-2.webp"
+    img1_alt=""
+    img2_src="/werk/vivaz/vivaz-mobile-3.webp"
+    img2_alt=""
+  />
+  <Img img_src="/werk/vivaz/vivaz-section-img-bg.webp" img_alt="#" />
+  <Desktop vid_src="/werk/vivaz/vid-vivaz-desktop.mp4" vid_title="#" />
+  <section class="quote mx-auto max-w-screen-xl py-16 px-4 md:px-8 lg:px-16 lg:py-32">
+    <div class="pagination quote-text flex w-full items-center justify-center gap-4 sm:gap-12">
+      <a href="../werk">&lt; werk</a> / <a href="#"> next &gt;</a>
+    </div><!-- /.quote -->
+  </section>
+</Standard>
