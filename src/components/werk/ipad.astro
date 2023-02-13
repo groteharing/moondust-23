@@ -5,7 +5,7 @@ export interface Props {
   vid_title: string;
 }
 
-const { background, vid_src, vid_title } = Astro.props;
+const { background, vid_src } = Astro.props;
 ---
 
 <section class={`w-full rounded-3xl ${background} py-16 max-w-screen-2xl mx-auto lg:py-32`}>
@@ -83,7 +83,6 @@ const { background, vid_src, vid_title } = Astro.props;
       </div><!-- /.ipad-frame -->
       <video
         class="absolute z-0 h-[90%] w-[93%] bg-slate-200 object-cover"
-        title={vid_title}
         muted
         autoplay
         playsinline
