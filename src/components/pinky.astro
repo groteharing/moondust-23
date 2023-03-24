@@ -9,9 +9,9 @@ export interface Props {
 const { heading, paragraph, src, alt } = Astro.props;
 ---
 
-<div class="pinky-container space-y-4">
+<div class="pinky-container space-y-4 md:space-y-8">
   <div
-    class="img-wrap flex aspect-square w-full items-center justify-center overflow-hidden rounded-3xl bg-md-astronaut-100"
+    class="img-wrap flex aspect-square w-full items-center justify-center overflow-hidden rounded-3xl"
   >
     <img class="object-cover" src={src} alt={alt} />
   </div>
