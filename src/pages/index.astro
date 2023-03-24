@@ -17,7 +17,7 @@ import '../styles/base.css';
   <main>
     <section
       id="container-hero"
-      class="hero mx-auto max-w-screen-2xl font-jost md:h-screen md:w-full md:px-4 md:py-4"
+      class="hero mx-auto max-h-[960px] max-w-screen-2xl font-jost md:h-screen md:w-full md:px-4 md:py-4"
     >
       <div
         class="hero relative h-full w-full overflow-hidden bg-gradient-to-b from-md-astronaut-200 to-md-flamingo-200 md:rounded-3xl"
@@ -98,9 +98,9 @@ import '../styles/base.css';
         <Card
           title="Willemsen Iso"
           description="branding, website, copywriting"
-          img_src=""
+          img_src="/werk/willemsen/willemsen-thumbnail.webp"
           img_alt="Project Thumbnail Willemsen Iso"
-          href="#"
+          href="../werk/willemsen"
           mtop="md:mt-12 lg:mt-16"
         />
       </div><!-- /.projects-grid -->
@@ -188,13 +188,13 @@ import '../styles/base.css';
       this.fill = fill;
 
       // the original radius of the orb, set relative to window height
-      this.radius = random(window.innerHeight / 1.6, window.innerHeight / 1.6);
+      this.radius = random(window.innerHeight / 1.5, window.innerHeight / 1.5);
 
       // starting points in "time" for the noise/self similar random values
       this.xOff = random(0, 500);
       this.yOff = random(0, 500);
       // how quickly the noise/self similar random values step through time
-      this.inc = random(0.0003, 0.0003);
+      this.inc = random(0.0004, 0.0005);
 
       // PIXI.Graphics is used to draw 2d primitives (in this case a circle) to the canvas
       this.graphics = new PIXI.Graphics();
@@ -211,7 +211,7 @@ import '../styles/base.css';
 
     setBounds() {
       // how far from the { x, y } origin can each orb move
-      const maxDist = window.innerWidth < 1000 ? window.innerWidth / 5 : window.innerWidth / 4;
+      const maxDist = window.innerWidth < 1000 ? window.innerWidth / 4 : window.innerWidth / 3;
       // the { x, y } origin for each orb (the bottom right of the screen)
       const originX = random(window.innerWidth / 2, window.innerHeight / 2);
       const originY = random(window.innerWidth / 2, window.innerHeight / 2);

@@ -1,0 +1,50 @@
+---
+import Standard from '../../layouts/standard.astro';
+import '../../styles/base.css';
+import Hero from '../../components/werk/hero.astro';
+import Hero_img from '../../components/werk/hero_img.astro';
+import Headline from '../../components/werk/headline.astro';
+import Ipad from '../../components/werk/ipad.astro';
+import Mobile from '../../components/werk/mobile.astro';
+import Img from '../../components/werk/img.astro';
+import Desktop from '../../components/werk/desktop.astro';
+---
+
+<Standard
+  title="Studio Moondust Werk"
+  h1="Willemsen Iso Portfolio"
+  description="#"
+  keywords="#"
+  og_img_url="/werk/willemsen/willemsen-hero-og.webp"
+  og_img_alt="#"
+  og_site_name="Studio Moondust"
+>
+  <Hero
+    heading="Een nieuw jasje voor Willemsen Isolatiebouw"
+    client="Willemsen Iso"
+    services="website, copywriting"
+    year="2021"
+    project_url="www.willemseniso.nl"
+  />
+  <Hero_img hero_img_src="/werk/willemsen/willemsen-hero-og.webp" hero_img_alt="#" />
+  <Headline
+    headline="Nunc quis tempor purus, eu pellentesque risus. Praesent vitae mauris augue. Maecenas vel augue rhoncus risus dapibus tempus. Nunc at egestas lacus. Morbi at lorem dolor."
+  />
+  <Ipad background="bg-[#DFECFF]" vid_src="/werk/willemsen/vid-ipad.mp4" vid_title="#" />
+  <Mobile
+    vid_src="/werk/willemsen/vid-mobile.mp4"
+    vid_title="ipad screencapture website willemsen"
+    img1_src="/werk/willemsen/willemsen-mobile-2.webp"
+    img1_alt=""
+    img2_src="/werk/willemsen/willemsen-mobile-3.webp"
+    img2_alt=""
+  />
+  <Img img_src="/werk/willemsen/willemsen-section-img-bg.webp" img_alt="#" />
+  <Desktop vid_src="/werk/willemsen/vid-desktop1.mp4" vid_title="#" />
+  <Desktop vid_src="/werk/willemsen/vid-desktop2.mp4" vid_title="#" />
+  <section class="quote mx-auto max-w-screen-xl py-16 px-4 md:px-8 lg:px-16 lg:py-32">
+    <div class="pagination quote-text flex w-full items-center justify-center gap-4 sm:gap-12">
+      <a href="../werk">&lt; werk</a> / <a href="#"> next &gt;</a>
+    </div><!-- /.quote -->
+  </section>
+</Standard>
