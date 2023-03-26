@@ -293,3 +293,12 @@ a:hover {
 .pinky-grid::-webkit-scrollbar {
   display: none;
 }
+
+/* ----- Tooltip ----- */
+.tooltip:hover::after {
+  @apply absolute -right-[75px] z-10 rounded-md bg-md-flamingo-400 py-1 px-2 font-jost text-white content-['kopieer'];
+}
+
+.tooltip-done::before {
+  @apply absolute -right-[100px] z-40 rounded-md bg-md-flamingo-400 py-1 px-2 font-jost text-white content-['gekopieerd'];
+}

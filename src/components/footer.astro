@@ -3,7 +3,7 @@
 
 <footer class="footer-wrap mx-auto max-w-screen-2xl py-1 px-1 md:py-4 md:px-4">
   <div
-    class="footer-wrap flex flex-col items-start justify-center space-y-4 rounded-3xl bg-md-black py-52 px-6 text-md-white md:items-center md:space-y-8 md:text-center"
+    class="footer-wrap flex min-h-[95vh] flex-col items-start justify-center space-y-4 rounded-3xl bg-md-black px-6 text-md-white md:items-center md:space-y-8 md:text-center"
   >
     <h2 class="font-jost text-4xl lg:text-6xl lg:font-medium">
       Have a project?<br />
@@ -64,7 +64,11 @@
           </div><!-- end icon -->
         </a><!-- end .outro-link -->
       </div>
-      <button class="flex flex-row items-center" id="clipboardButton" title="Moondust Email">
+      <button
+        class="tooltip relative flex flex-row items-center hover:text-md-flamingo-400"
+        id="clipboardButton"
+        title="Moondust Email"
+      >
         hello@studiomoondust.com
         <div class="ml-1 h-5 w-5">
           <svg
@@ -88,14 +92,3 @@
   </div><!-- /.footer-wrap -->
   <!-- <button id="clipboardButton">Click to Copy</button> -->
 </footer>
-
-<script>
-  var clipboardBtn = document.getElementById('clipboardButton');
-  clipboardBtn!.addEventListener('click', function () {
-    navigator.clipboard.writeText('hello@studiomoondust.com');
-    clipboardBtn!.classList.add('done');
-    setTimeout(() => {
-      clipboardBtn!.classList.remove('done');
-    }, 1600);
-  });
-</script>

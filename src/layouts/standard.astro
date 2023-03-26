@@ -35,3 +35,19 @@ const { title, h1, description, keywords, og_url, og_img_url, og_site_name } = A
     <Footer />
   </body>
 </html>
+
+<script>
+  // Find all buttons with the `tooltip` class on the page.
+  const buttons = document.querySelectorAll('button.tooltip');
+
+  // Handle clicks on each button.
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      navigator.clipboard.writeText('hello@studiomoondust.com');
+      button.classList.add('tooltip-done');
+      setTimeout(() => {
+        button.classList.remove('tooltip-done');
+      }, 1400);
+    });
+  });
+</script>

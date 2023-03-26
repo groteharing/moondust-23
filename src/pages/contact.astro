@@ -13,42 +13,86 @@ import '../styles/base.css';
       </div>
     </section><!-- /.hero -->
     <section class="contact-form mx-auto max-w-[960px] px-4 pb-16 md:px-8 lg:px-16 lg:pb-24">
-      <form class="flex flex-col items-start justify-start space-y-10" action="">
+      <form
+        class="flex flex-col items-start justify-start space-y-10"
+        action="https://getform.io/f/2caffaca-f2fe-4668-8375-5c3d71dab89d"
+        method="POST"
+      >
         <div class="interested">
           <h3 class="mb-2 py-4 font-jost text-xl">Ik ben geïnteresseerd in</h3>
           <div
             class="checkboxes first-letter: flex flex-row flex-wrap gap-4 align-middle [&_label]:py-4"
           >
             <label for="int-scratch">
-              <input class="check-btn hidden" type="checkbox" id="int-scratch" />
+              <input
+                class="check-btn hidden"
+                type="checkbox"
+                id="int-scratch"
+                name="interested-scratch"
+              />
               <span>site from scratch</span>
             </label>
             <label for="int-branding">
-              <input class="check-btn hidden" type="checkbox" id="int-branding" />
+              <input
+                class="check-btn hidden"
+                type="checkbox"
+                id="int-branding"
+                name="interested-branding"
+              />
               <span>fabulous branding</span>
             </label>
             <label for="int-development">
-              <input class="check-btn hidden" type="checkbox" id="int-development" />
+              <input
+                class="check-btn hidden"
+                type="checkbox"
+                id="int-development"
+                name="interested-development"
+              />
               <span>development</span>
             </label>
             <label for="int-webdesign">
-              <input class="check-btn hidden" type="checkbox" id="int-webdesign" />
+              <input
+                class="check-btn hidden"
+                type="checkbox"
+                id="int-webdesign"
+                name="interested-webdesign"
+              />
               <span>webdesign</span>
             </label>
             <label for="int-copy">
-              <input class="check-btn hidden" type="checkbox" id="int-copy" />
+              <input
+                class="check-btn hidden"
+                type="checkbox"
+                id="int-copy"
+                name="interested-copywriting"
+              />
               <span>copywriting</span>
             </label>
             <label for="int-content">
-              <input class="check-btn hidden" type="checkbox" id="int-content" />
+              <input
+                class="check-btn hidden"
+                type="checkbox"
+                id="int-content"
+                name="interested-content"
+              />
               <span>content marketing</span>
             </label>
             <label for="int-onderhoud">
-              <input class="check-btn hidden" type="checkbox" id="int-onderhoud" />
+              <input
+                class="check-btn hidden"
+                type="checkbox"
+                id="int-onderhoud"
+                name="interested-onderhoud"
+              />
               <span>onderhoud</span>
             </label>
             <label for="int-marketing">
-              <input class="check-btn hidden" type="checkbox" id="int-marketing" />
+              <input
+                class="check-btn hidden"
+                type="checkbox"
+                id="int-marketing"
+                name="interested-marketing"
+              />
               <span>marketing</span>
             </label>
           </div><!--/.checkboxes -->
@@ -56,51 +100,69 @@ import '../styles/base.css';
         <div
           class="text-inputs flex w-full flex-col space-y-10 font-jost text-xl font-medium [&_::placeholder]:text-md-black"
         >
-          <input class="input-text-field" type="text" id="name" placeholder="Naam*" required />
-          <input class="input-text-field" type="text" id="email" placeholder="Email*" required />
-          <input class="input-text-field" type="text" id="project" placeholder="Project" />
+          <input
+            class="input-text-field"
+            type="text"
+            id="name"
+            placeholder="Naam*"
+            name="credentials-name"
+            required
+          />
+          <input
+            class="input-text-field"
+            type="text"
+            id="email"
+            placeholder="Email*"
+            name="credentials-email"
+            required
+          />
           <textarea
             class="input-text-field"
             id="project-tellus"
             placeholder="Vertel ons over je project"
+            name="project-description"
             required></textarea>
         </div><!-- /.text-inputs -->
         <div class="budget">
           <h3 class="mb-2 py-4 font-jost text-xl">Budget(€)</h3>
           <div class="checkboxes flex flex-row flex-wrap gap-4 align-middle [&_label]:py-4">
             <label for="bug-2k">
-              <input class="check-btn" type="checkbox" id="bug-2k" />
+              <input class="check-btn" type="checkbox" id="bug-2k" name="budget-2k" />
               <span>2.5K - 5K</span>
             </label>
             <label for="bug-5k">
-              <input class="check-btn" type="checkbox" id="bug-5k" />
+              <input class="check-btn" type="checkbox" id="bug-5k" name="budget-5k" />
               <span>5K - 7.5K</span>
             </label>
             <label for="bug-7k">
-              <input class="check-btn" type="checkbox" id="bug-7k" />
+              <input class="check-btn" type="checkbox" id="bug-7k" name="budget-7k" />
               <span>7.5K - 10K</span>
             </label>
             <label for="bug-10k">
-              <input class="check-btn" type="checkbox" id="bug-10k" />
+              <input class="check-btn" type="checkbox" id="bug-10k" name="budget-10k" />
               <span>10K - 15K</span>
             </label>
             <label for="bug-15k">
-              <input class="check-btn" type="checkbox" id="bug-15k" />
+              <input class="check-btn" type="checkbox" id="bug-15k" name="budget-15k" />
               <span>15K+</span>
             </label>
           </div><!--/.checkboxes -->
         </div><!-- /.budget -->
-
-        <input
+        <button
           class="cursor-pointer rounded-full border-[1px] border-gray-300 bg-md-lilac-400 py-4 px-8 text-md-white hover:bg-md-lilac-300 active:bg-md-lilac-300"
           type="submit"
-          value="Verzend"
-        />
+        >
+          Verzend
+        </button>
       </form>
       <div class="form-outro grid w-full grid-flow-row gap-8 pt-16 md:grid-flow-col">
         <div class="flex flex-col space-y-1">
           <h4 class="font-jost font-medium">Gegevens</h4>
-          <a class="flex flex-row items-center" title="Moondust Email" href="#">
+          <button
+            class="tooltip relative flex flex-row items-center place-self-start hover:text-md-flamingo-400"
+            id="clipboardButton"
+            title="Moondust Email"
+          >
             hello@studiomoondust.com
             <div class="ml-1 h-5 w-5">
               <svg
@@ -119,7 +181,7 @@ import '../styles/base.css';
                 ></rect>
               </svg>
             </div><!-- end icon -->
-          </a>
+          </button><!-- end .outro-link -->
           <div class="flex flex-row items-center">KvK: 81357389</div><!-- end .outro-link -->
           <a class="flex flex-row items-center" title="Algemene Voorwaarden" href="#">
             algemene voorwaarden
