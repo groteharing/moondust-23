@@ -16,6 +16,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://moondust.com',
   integrations: [
     alpinejs(),
     tailwind({
