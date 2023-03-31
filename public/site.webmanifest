@@ -1,0 +1,18 @@
+{
+  "short_name": "Moondust",
+  "name": "Studio Moondust - creatief micro-agency",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/",
+  "start_url": "/",
+  "background_color": "#fefefe",
+  "display": "browser",
+  "scope": "/",
+  "theme_color": "#000000",
+  "description": "Branding, websites & content"
+}

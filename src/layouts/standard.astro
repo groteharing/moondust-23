@@ -1,6 +1,6 @@
 ---
-import Nav from '../components/nav.astro';
-import Footer from '../components/footer.astro';
+import Nav from "../components/nav.astro";
+import Footer from "../components/footer.astro";
 
 const { title, h1, description, keywords, og_url, og_img_url, og_site_name } = Astro.props;
 ---
@@ -18,8 +18,9 @@ const { title, h1, description, keywords, og_url, og_img_url, og_site_name } = A
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#fefefe" />
 
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="og:title" content={title} />
@@ -28,7 +29,7 @@ const { title, h1, description, keywords, og_url, og_img_url, og_site_name } = A
     <meta name="og:site_name" content={og_site_name} />
     <meta name="og:description" content={description} />
   </head>
-  <body class="font-gangster font-light">
+  <body class="bg-md-bg font-gangster font-light">
     <h1 class="sr-only">{h1}</h1>
     <Nav />
     <slot />
@@ -38,15 +39,15 @@ const { title, h1, description, keywords, og_url, og_img_url, og_site_name } = A
 
 <script>
   // Find all buttons with the `tooltip` class on the page.
-  const buttons = document.querySelectorAll('button.tooltip');
+  const buttons = document.querySelectorAll("button.tooltip");
 
   // Handle clicks on each button.
   buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      navigator.clipboard.writeText('hello@studiomoondust.com');
-      button.classList.add('tooltip-done');
+    button.addEventListener("click", () => {
+      navigator.clipboard.writeText("hello@studiomoondust.com");
+      button.classList.add("tooltip-done");
       setTimeout(() => {
-        button.classList.remove('tooltip-done');
+        button.classList.remove("tooltip-done");
       }, 1400);
     });
   });

@@ -76,7 +76,7 @@ a:hover {
 }
 
 .hero-text {
-  @apply self-center sm:mx-auto sm:max-w-6xl sm:px-20 sm:text-center;
+  @apply self-center sm:mx-auto sm:max-w-5xl sm:px-20 sm:text-center;
 }
 
 .intro-text {
@@ -141,48 +141,48 @@ a:hover {
 /* -- Font Jost -- */
 /* Jost regular */
 @font-face {
-  font-family: 'Jost';
-  src: url('/fonts/jost/Jost-Regular.ttf');
+  font-family: "Jost";
+  src: url("/fonts/jost/Jost-Regular.ttf");
   font-style: normal;
   font-weight: 400;
 }
 
 /* Jost italic */
 @font-face {
-  font-family: 'Jost';
-  src: url('/fonts/jost/Jost-Italic.ttf');
+  font-family: "Jost";
+  src: url("/fonts/jost/Jost-Italic.ttf");
   font-style: italic;
   font-weight: 400;
 }
 
 /* Jost Light */
 @font-face {
-  font-family: 'Jost';
-  src: url('/fonts/jost/Jost-Light.ttf');
+  font-family: "Jost";
+  src: url("/fonts/jost/Jost-Light.ttf");
   font-style: normal;
   font-weight: 300;
 }
 
 /* Jost Light italic */
 @font-face {
-  font-family: 'Jost';
-  src: url('/fonts/jost/Jost-LightItalic.ttf');
+  font-family: "Jost";
+  src: url("/fonts/jost/Jost-LightItalic.ttf");
   font-style: italic;
   font-weight: 300;
 }
 
 /* Jost Medium */
 @font-face {
-  font-family: 'Jost';
-  src: url('/fonts/jost/Jost-Medium.ttf');
+  font-family: "Jost";
+  src: url("/fonts/jost/Jost-Medium.ttf");
   font-style: normal;
   font-weight: 500;
 }
 
 /* Jost Medium italic */
 @font-face {
-  font-family: 'Jost';
-  src: url('/fonts/jost/Jost-MediumItalic.ttf');
+  font-family: "Jost";
+  src: url("/fonts/jost/Jost-MediumItalic.ttf");
   font-style: italic;
   font-weight: 500;
 }
@@ -190,24 +190,24 @@ a:hover {
 /* -- Font Gangster -- */
 /* Gangster light */
 @font-face {
-  font-family: 'Gangster';
-  src: url('/fonts/gangster/GangsterGrotesk-Light.woff');
+  font-family: "Gangster";
+  src: url("/fonts/gangster/GangsterGrotesk-Light.woff");
   font-style: normal;
   font-weight: 300;
 }
 
 /* Gangster regular */
 @font-face {
-  font-family: 'Gangster';
-  src: url('/fonts/gangster/GangsterGrotesk-Regular.woff');
+  font-family: "Gangster";
+  src: url("/fonts/gangster/GangsterGrotesk-Regular.woff");
   font-style: normal;
   font-weight: 400;
 }
 
 /* Gangster regular */
 @font-face {
-  font-family: 'Gangster';
-  src: url('/fonts/gangster/GangsterGrotesk-Bold.woff');
+  font-family: "Gangster";
+  src: url("/fonts/gangster/GangsterGrotesk-Bold.woff");
   font-style: normal;
   font-weight: 500;
 }
@@ -255,7 +255,7 @@ a:hover {
   transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .hamburger-inner::before {
-  content: '';
+  content: "";
   display: block;
 }
 .hamburger-inner::before {
