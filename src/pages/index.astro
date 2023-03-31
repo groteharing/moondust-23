@@ -17,12 +17,12 @@ import "../styles/base.css";
   <main>
     <section
       id="container-hero"
-      class="hero relative mx-auto max-h-[960px] max-w-screen-2xl font-jost md:h-screen"
+      class="hero relative mx-auto max-h-[1080px] max-w-screen-2xl font-jost md:h-screen"
     >
       <div class="intro-wrap">
         <div
           id="intro-black"
-          class="absolute top-0 left-0 z-40 flex h-screen w-full items-center bg-md-black"
+          class="absolute top-0 left-0 z-40 flex h-full w-full items-center bg-md-black"
         >
         </div>
         <div
@@ -66,7 +66,7 @@ import "../styles/base.css";
               fill="white"></path>
           </svg>
         </div>
-        <div id="intro-bg-wrap" class="absolute z-0 h-screen w-full">
+        <div id="intro-bg-wrap" class="absolute z-0 h-screen max-h-[1080px] w-full">
           <div
             id="intro-bg"
             class="z-0 h-full w-full bg-gradient-to-b from-md-astronaut-200 to-md-flamingo-200 md:rounded-3xl"
@@ -80,7 +80,9 @@ import "../styles/base.css";
           <div class="empty self-start"></div>
           <div class="hero-text">
             <h2 class="relative inline tracking-tight text-md-white">
-              Creatief micro-agency die missiegedreven merken lanceert
+              <span>Creatief micro-agency dat</span>
+              <span>merken met een missie</span>
+              <span>lanceert</span>
             </h2>
             <div class="relative left-[-8] inline-block h-10 w-10 pt-1 lg:h-16 lg:w-16">
               <svg
@@ -107,7 +109,7 @@ import "../styles/base.css";
           </div><!-- /.hero-text -->
           <div class="hero-outro flex flex-row justify-between self-end pb-6 text-sm">
             <div>branding, websites & content</div>
-            <div class="hidden md:block">currently in: The Netherlands</div>
+            <div class="hero-outro hidden md:block">currently in: The Netherlands</div>
           </div><!-- /.hero-outro -->
         </div>
       </div><!-- /.hero -->
@@ -204,14 +206,40 @@ import "../styles/base.css";
 <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Observer.min.js"></script>
 <script is:inline>
   let intro = gsap.timeline({ defaults: {} });
-  intro.to("#intro-svg", { ease: "power4.in", duration: 1.2, opacity: 100 });
-  intro.to("#intro-svg", { y: -80, ease: "power4.easeout", duration: 0.8 }, 2);
+  // Intro SVG logo
+  intro.to("#intro-svg", { ease: "power4.in", duration: 1.2, autoAlpha: 100 });
+  intro.to("#intro-svg", { y: -80, ease: "power4.easeout", duration: 0.8, display: "none" }, 1.2);
+
+  // Intro black background
   intro.to(
     "#intro-black",
-    { y: "-100vh", ease: "power4.easeOut", duration: 1, display: "none" },
+    { y: "-100vh", ease: "power4.easeinOut", duration: 0.8, display: "none" },
     "<"
   );
-  intro.to("#intro-bg-wrap", { padding: "1rem", duration: 1.2, ease: "power4.easeIn" }, "<0.5");
+  intro.to("#intro-bg-wrap", { padding: "1rem", duration: 0.8, ease: "power4.easeOut" }, "<0.8");
+  intro.fromTo(
+    "#nav-logo",
+    { x: -40, opacity: 0 },
+    {
+      x: 0,
+      autoAlpha: 1,
+      duration: 0.8,
+      ease: "power.easeOut",
+    },
+    "<"
+  );
+  intro.fromTo(
+    "#nav-list",
+    { x: 40, opacity: 0 },
+    { x: 0, autoAlpha: 1, duration: 0.8, ease: "power.easeOut" },
+    "<"
+  );
+  intro.fromTo(
+    ".hero-outro",
+    { y: 20, opacity: 0 },
+    { y: 0, autoAlpha: 1, duration: 0.4, ease: "power.easeOut" },
+    "<"
+  );
 </script>
 <script>
   const smallDevice = window.matchMedia("(max-width: 478px)");
