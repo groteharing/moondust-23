@@ -302,3 +302,11 @@ a:hover {
 .tooltip-done::before {
   @apply absolute -right-[100px] z-40 rounded-md bg-md-flamingo-400 py-1 px-2 font-jost text-white content-['gekopieerd'];
 }
+
+/* ------- Hero intro animation ------ */
+.letter {
+  display: inline-block;
+}
+.tricksword {
+  white-space: nowrap;
+}

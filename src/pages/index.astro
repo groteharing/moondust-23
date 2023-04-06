@@ -15,6 +15,7 @@ import "../styles/base.css";
   og_site_name="#"
 >
   <main>
+    <!-- hero -->
     <section
       id="container-hero"
       class="hero relative mx-auto max-h-[1080px] max-w-screen-2xl font-jost md:h-screen"
@@ -78,13 +79,11 @@ import "../styles/base.css";
       <div class="hero relative z-20 h-full w-full overflow-hidden md:px-4 md:py-4">
         <div class="hero-grid relative z-20 grid h-full grid-rows-3 px-6">
           <div class="empty self-start"></div>
-          <div class="hero-text">
-            <h2 class="relative inline tracking-tight text-md-white">
-              <span>Creatief micro-agency dat</span>
-              <span>merken met een missie</span>
-              <span>lanceert</span>
+          <div class="hero-text overflow-hidden">
+            <h2 id="hero-headliner" class="tricks relative inline tracking-tight text-md-white">
+              Creatief micro-agency dat merken met een missie lanceert
             </h2>
-            <div class="relative left-[-8] inline-block h-10 w-10 pt-1 lg:h-16 lg:w-16">
+            <div class="letter relative left-[-8] inline-block h-10 w-10 pt-1 lg:h-16 lg:w-16">
               <svg
                 width="100%"
                 height="100%"
@@ -113,7 +112,8 @@ import "../styles/base.css";
           </div><!-- /.hero-outro -->
         </div>
       </div><!-- /.hero -->
-    </section><!-- /.container-hero -->
+    </section>
+    <!-- intro -->
     <section class="intro mx-auto max-w-screen-xl px-4 py-16 md:px-16 lg:pb-32">
       <div class="wrap">
         <p class="intro-text">
@@ -122,7 +122,8 @@ import "../styles/base.css";
           websites en content. Ready for take-off?
         </p>
       </div><!-- /.wrap-intro -->
-    </section><!-- /.intro -->
+    </section>
+    <!-- projects -->
     <section class="projects mx-auto max-w-screen-xl px-4 pb-16 md:px-16 lg:pb-32">
       <h3 class="mb-2 py-4 font-jost text-xl">featured projects</h3>
       <div class="projects-grid grid space-y-12 md:grid-cols-2 md:gap-x-8 md:space-y-0 lg:gap-x-24">
@@ -159,7 +160,8 @@ import "../styles/base.css";
           mtop="md:mt-12 lg:mt-16"
         />
       </div><!-- /.projects-grid -->
-    </section><!-- /.projects -->
+    </section>
+    <!-- pinky-promises -->
     <section
       class="pinky-promises mx-auto w-full max-w-screen-2xl rounded-3xl bg-md-lilac-100 py-16 lg:py-32"
     >
@@ -193,53 +195,116 @@ import "../styles/base.css";
         >
       </div>
     </section>
-  </main><!-- /.pinky-promises -->
-  <section class="quote mx-auto max-w-screen-xl px-4 pt-16 pb-8 md:px-16 lg:pt-32 lg:pb-16">
-    <h3 class="quote-text">
-      *<br /> Een sterke strategie: dat is ons startpunt. Vanuit daar bouwen we verder. Een merk dat
-      raakt, verbindt, transformeert, opvalt en converteert.
-    </h3>
-  </section><!-- /.quote -->
+    <!-- quote -->
+    <section class="quote mx-auto max-w-screen-xl px-4 pt-16 pb-8 md:px-16 lg:pt-32 lg:pb-16">
+      <h3 class="quote-text">
+        *<br /> Een sterke strategie: dat is ons startpunt. Vanuit daar bouwen we verder. Een merk dat
+        raakt, verbindt, transformeert, opvalt en converteert.
+      </h3>
+    </section>
+  </main>
 </Standard>
 
 <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Observer.min.js"></script>
-<script>
-  let intro = gsap.timeline({ defaults: {} });
-  // Intro SVG logo
-  intro.to("#intro-svg", { ease: "power4.in", duration: 1.2, autoAlpha: 100 });
-  intro.to("#intro-svg", { y: -80, ease: "power4.easeout", duration: 0.6, display: "none" }, 1);
 
-  // Intro black background
-  intro.to(
-    "#intro-black",
-    { y: "-100vh", ease: "power4.easeinOut", duration: 0.6, display: "none" },
-    "<"
-  );
-  intro.to("#intro-bg-wrap", { padding: "1rem", duration: 0.6, ease: "power4.easeOut" }, "<0.6");
-  intro.fromTo(
-    "#nav-logo",
-    { x: -40, opacity: 0 },
-    {
-      x: 0,
-      autoAlpha: 1,
-      duration: 0.6,
-      ease: "power4.easeOut",
-    },
-    "<"
-  );
-  intro.fromTo(
-    "#nav-list",
-    { x: 40, opacity: 0 },
-    { x: 0, autoAlpha: 1, duration: 0.6, ease: "power4.easeOut" },
-    "<"
-  );
-  intro.fromTo(
-    ".hero-outro",
-    { y: 20, opacity: 0 },
-    { y: 0, autoAlpha: 1, duration: 0.4, ease: "power4.easeOut" },
-    "<"
-  );
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Observer.min.js"></script>
+<script is:inline>
+  // Wrap hero in text lines
+  // Find all text with .tricks class and break each word into a span
+  var tricksWord = document.getElementsByClassName("tricks");
+  for (var i = 0; i < tricksWord.length; i++) {
+    var wordWrap = tricksWord.item(i);
+    wordWrap.innerHTML = wordWrap.innerHTML.replace(
+      /(^|<\/?[^>]+>|\s+)([^\s<]+)/g,
+      '$1<span class="tricksword">$2</span>'
+    );
+  }
+  // Break each wordspan into letters
+  var tricksLetter = document.getElementsByClassName("tricksword");
+  for (var i = 0; i < tricksLetter.length; i++) {
+    var letterWrap = tricksLetter.item(i);
+    letterWrap.innerHTML = letterWrap.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  }
+
+  let mm = gsap.matchMedia();
+
+  mm.add("(max-width: 767px)", () => {
+    // Intro timeline mobile
+    let introMobile = gsap.timeline({ defaults: {} });
+
+    // Intro SVG logo
+    introMobile.to("#intro-svg", { ease: "power4.in", duration: 1.2, autoAlpha: 100 });
+    introMobile.to(
+      "#intro-svg",
+      { y: -80, ease: "power4.easeout", duration: 0.6, display: "none" },
+      1
+    );
+
+    // Intro black background
+    introMobile.to(
+      "#intro-black",
+      { y: "-100vh", ease: "power4.easeinOut", duration: 0.6, display: "none" },
+      "<"
+    );
+  });
+
+  mm.add("(min-width: 768px)", () => {
+    // Intro timeline dekstop
+    let introDesktop = gsap.timeline({ defaults: {} });
+
+    // Intro SVG logo
+    introDesktop.to("#intro-svg", { ease: "power4.in", duration: 1.2, autoAlpha: 100 });
+    introDesktop.to(
+      "#intro-svg",
+      { y: -80, ease: "power4.easeout", duration: 0.6, display: "none" },
+      1
+    );
+
+    // Intro black background
+    introDesktop.to(
+      "#intro-black",
+      { y: "-100vh", ease: "power4.easeinOut", duration: 0.6, display: "none" },
+      "<"
+    );
+    introDesktop.to(
+      "#intro-bg-wrap",
+      { padding: "1rem", duration: 0.6, ease: "power4.easeOut" },
+      "<0.6"
+    );
+
+    // Intro small text items from the hero section
+    introDesktop.fromTo(
+      "#nav-logo",
+      { x: -40, opacity: 0 },
+      {
+        x: 0,
+        autoAlpha: 1,
+        duration: 0.6,
+        ease: "power4.easeOut",
+      },
+      "<"
+    );
+    introDesktop.fromTo(
+      "#nav-list",
+      { x: 40, opacity: 0 },
+      { x: 0, autoAlpha: 1, duration: 0.8, ease: "power4.easeOut" },
+      "<"
+    );
+    introDesktop.fromTo(
+      ".hero-outro",
+      { y: 20, opacity: 0 },
+      { y: 0, autoAlpha: 1, duration: 0.8, ease: "power4.easeOut" },
+      "<"
+    );
+
+    // Intro hero-text
+    introDesktop.fromTo(
+      ".letter",
+      { y: -20, opacity: 0 },
+      { y: 0, autoAlpha: 1, duration: 0.6, ease: "power4.easeOut", stagger: 0.0085 },
+      "<"
+    );
+  });
 </script>
 <script>
   const smallDevice = window.matchMedia("(max-width: 478px)");
