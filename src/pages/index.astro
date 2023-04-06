@@ -243,7 +243,7 @@ import "../styles/base.css";
     // Intro black background
     introMobile.to(
       "#intro-black",
-      { y: "-100vh", ease: "power4.easeinOut", duration: 0.6, display: "none" },
+      { y: "-100vh", ease: "power4.easeinOut", duration: 0.8, display: "none" },
       "<"
     );
   });
@@ -362,7 +362,7 @@ import "../styles/base.css";
       this.xOff = random(0, 500);
       this.yOff = random(0, 500);
       // how quickly the noise/self similar random values step through time
-      this.inc = random(0.0004, 0.0005);
+      this.inc = random(0.0009, 0.0009);
 
       // PIXI.Graphics is used to draw 2d primitives (in this case a circle) to the canvas
       this.graphics = new PIXI.Graphics();
@@ -444,7 +444,7 @@ import "../styles/base.css";
   });
 
   // first value: blur, second: quality, third: clamp(true or false)
-  app.stage.filters = [new KawaseBlurFilter(80, 30, true)];
+  app.stage.filters = [new KawaseBlurFilter(85, 20, true)];
 
   // An array that holds all the colors
   const colorChoices = ["0xC79EFE", "0xFBC3B4", "0xA3ACDD"];
