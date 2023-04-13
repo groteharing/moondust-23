@@ -19,6 +19,7 @@ import "../styles/base.css";
     <section
       id="container-hero"
       class="hero relative mx-auto max-h-[1080px] max-w-screen-2xl font-jost md:h-screen"
+      data-scroll-section
     >
       <div class="intro-wrap">
         <div
@@ -79,11 +80,16 @@ import "../styles/base.css";
       <div class="hero relative z-20 h-full w-full overflow-hidden md:px-4 md:py-4">
         <div class="hero-grid relative z-20 grid h-full grid-rows-3 px-6">
           <div class="empty self-start"></div>
-          <div class="hero-text overflow-hidden">
-            <h2 id="hero-headliner" class="tricks relative inline tracking-tight text-md-white">
+          <div class="hero-text overflow-hidden" id="hero-headline">
+            <h2 class="tricks relative inline tracking-tight text-md-white">
               Creatief micro-agency dat merken met een missie lanceert
             </h2>
-            <div class="letter relative left-[-8] inline-block h-10 w-10 pt-1 lg:h-16 lg:w-16">
+            <div
+              data-scroll
+              data-scroll-speed="0.4"
+              data-scroll-position="top"
+              class="letter relative left-[-8] inline-block h-10 w-10 pt-1 lg:h-16 lg:w-16"
+            >
               <svg
                 width="100%"
                 height="100%"
@@ -106,17 +112,26 @@ import "../styles/base.css";
               </svg>
             </div>
           </div><!-- /.hero-text -->
-          <div class="hero-outro flex flex-row justify-between self-end pb-6 text-sm">
-            <div>branding, websites & content</div>
-            <div class="hero-outro hidden md:block">currently in: The Netherlands</div>
+          <div class="hero-outro relative flex flex-row justify-between self-end pb-6 text-sm">
+            <div data-scroll data-scroll-speed="0.4" data-scroll-position="top">
+              branding, websites & content
+            </div>
+            <div
+              data-scroll
+              data-scroll-speed="0.2"
+              data-scroll-position="top"
+              class="hero-outro hidden md:block"
+            >
+              currently in: The Netherlands
+            </div>
           </div><!-- /.hero-outro -->
         </div>
       </div><!-- /.hero -->
     </section>
     <!-- intro -->
-    <section class="intro mx-auto max-w-screen-xl px-4 py-16 md:px-16 lg:pb-32">
-      <div class="wrap">
-        <p class="intro-text">
+    <section class="intro mx-auto max-w-screen-xl px-4 py-16 md:px-16 lg:pb-32" data-scroll-section>
+      <div class="wrap" id="intro-text">
+        <p class="intro-text tricks">
           Wij helpen missiegedreven bedrijven bij het bouwen van een sterk merk. Met creativiteit,
           technologie, strategie en design brengen we jouw levensmissie tot uiting in branding,
           websites en content. Ready for take-off?
@@ -124,8 +139,18 @@ import "../styles/base.css";
       </div><!-- /.wrap-intro -->
     </section>
     <!-- projects -->
-    <section class="projects mx-auto max-w-screen-xl px-4 pb-16 md:px-16 lg:pb-32">
-      <h3 class="mb-2 py-4 font-jost text-xl">featured projects</h3>
+    <section
+      class="projects mx-auto max-w-screen-xl px-4 pb-16 md:px-16 lg:pb-32"
+      data-scroll-section
+    >
+      <h3
+        class="mb-2 py-4 font-jost text-xl"
+        data-scroll
+        data-scroll-speed="0.4"
+        data-scroll-position="top"
+      >
+        featured projects
+      </h3>
       <div class="projects-grid grid space-y-12 md:grid-cols-2 md:gap-x-8 md:space-y-0 lg:gap-x-24">
         <Card
           title="Tess Verhees"
@@ -134,6 +159,7 @@ import "../styles/base.css";
           img_alt="Project Thumbnail Tess Verhees"
           href="../werk/tess-verhees"
           mtop="#"
+          scrollSpeed="0.1"
         />
         <Card
           title="Elements Concept Interior"
@@ -142,6 +168,7 @@ import "../styles/base.css";
           img_alt="Project Thumbnail Elements Concept Interior"
           href="../werk/elements-interior"
           mtop="md:mt-12 lg:mt-16"
+          scrollSpeed="0.4"
         />
         <Card
           title="Vivaz"
@@ -150,6 +177,7 @@ import "../styles/base.css";
           img_alt="Project Thumbnail Vivaz"
           href="../werk/vivaz"
           mtop="#"
+          scrollSpeed="0.1"
         />
         <Card
           title="Willemsen Iso"
@@ -158,17 +186,19 @@ import "../styles/base.css";
           img_alt="Project Thumbnail Willemsen Iso"
           href="../werk/willemsen"
           mtop="md:mt-12 lg:mt-16"
+          scrollSpeed="0.4"
         />
       </div><!-- /.projects-grid -->
     </section>
     <!-- pinky-promises -->
     <section
       class="pinky-promises mx-auto w-full max-w-screen-2xl rounded-3xl bg-md-lilac-100 py-16 lg:py-32"
+      data-scroll-section
     >
       <div class="wrap mx-auto max-w-screen-xl">
         <h3 class="mb-2 py-4 px-4 font-jost text-xl md:px-16">pinky promises</h3>
         <div
-          class="pinky-grid grid grid-cols-[83.33vw_83.33vw_83.33vw] gap-x-4 overflow-x-auto px-4 pb-8 md:grid-cols-[41.667vw_41.667vw_41.667vw] md:gap-x-8 md:px-16 lg:grid-cols-3 lg:gap-x-24"
+          class="pinky-grid grid grid-cols-[83.33vw_83.33vw_83.33vw] gap-x-4 overflow-x-auto px-4 pb-8 md:grid-cols-[41.667vw_41.667vw_41.667vw] md:gap-x-8 md:overflow-visible md:px-16 lg:grid-cols-3 lg:gap-x-24"
         >
           <Pinky
             heading="Connectie"
@@ -196,8 +226,11 @@ import "../styles/base.css";
       </div>
     </section>
     <!-- quote -->
-    <section class="quote mx-auto max-w-screen-xl px-4 pt-16 pb-8 md:px-16 lg:pt-32 lg:pb-16">
-      <h3 class="quote-text">
+    <section
+      class="quote mx-auto max-w-screen-xl px-4 pt-16 pb-8 md:px-16 lg:pt-32 lg:pb-16"
+      data-scroll-section
+    >
+      <h3 class="quote-text tricks">
         *<br /> Een sterke strategie: dat is ons startpunt. Vanuit daar bouwen we verder. Een merk dat
         raakt, verbindt, transformeert, opvalt en converteert.
       </h3>
@@ -221,7 +254,20 @@ import "../styles/base.css";
   handleDeviceChange(smallDevice);
 </script>
 
-<!-- Hero animation -->
+<!-- Load scripts -->
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+></script>
+<script
+  type="module"
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"
+></script>
+
+<!-- GSAP & Locomotive animations -->
+<script type="module" is:inline src="/locomotive-gsap.js"></script>
+
+<!-- Hero mesh gradient -->
 <script defer type="module">
   import * as PIXI from "https://cdn.skypack.dev/pixi.js@6.5.3";
   import { KawaseBlurFilter } from "https://cdn.skypack.dev/@pixi/filter-kawase-blur";
@@ -376,109 +422,4 @@ import "../styles/base.css";
       orb.render();
     });
   }
-</script>
-
-<!-- GSAP libraries -->
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
-></script>
-
-<!-- GSAP animations -->
-<script is:inline>
-  // Wrap hero in text lines
-  // Find all text with .tricks class and break each word into a span
-  var tricksWord = document.getElementsByClassName("tricks");
-  for (var i = 0; i < tricksWord.length; i++) {
-    var wordWrap = tricksWord.item(i);
-    wordWrap.innerHTML = wordWrap.innerHTML.replace(
-      /(^|<\/?[^>]+>|\s+)([^\s<]+)/g,
-      '$1<span class="tricksword">$2</span>'
-    );
-  }
-  // Break each wordspan into letters
-  var tricksLetter = document.getElementsByClassName("tricksword");
-  for (var i = 0; i < tricksLetter.length; i++) {
-    var letterWrap = tricksLetter.item(i);
-    letterWrap.innerHTML = letterWrap.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-  }
-
-  let mm = gsap.matchMedia();
-
-  mm.add("(max-width: 767px)", () => {
-    // Intro timeline mobile
-    let introMobile = gsap.timeline({ defaults: {} });
-
-    // Intro SVG logo
-    introMobile.to("#intro-svg", { ease: "power4.in", duration: 1.2, autoAlpha: 100 });
-    introMobile.to(
-      "#intro-svg",
-      { y: -80, ease: "power4.easeout", duration: 0.6, display: "none" },
-      1
-    );
-
-    // Intro black background
-    introMobile.to(
-      "#intro-black",
-      { y: "-100vh", ease: "power4.easeinOut", duration: 0.8, display: "none" },
-      "<"
-    );
-  });
-
-  mm.add("(min-width: 768px)", () => {
-    // Intro timeline dekstop
-    let introDesktop = gsap.timeline({ defaults: {} });
-
-    // Intro SVG logo
-    introDesktop.to("#intro-svg", { ease: "power4.in", duration: 1.2, autoAlpha: 100 });
-    introDesktop.to(
-      "#intro-svg",
-      { y: -80, ease: "power4.easeout", duration: 0.6, display: "none" },
-      1
-    );
-
-    // Intro black background
-    introDesktop.to(
-      "#intro-black",
-      { y: "-100vh", ease: "power4.easeinOut", duration: 0.6, display: "none" },
-      "<"
-    );
-    introDesktop.to(
-      "#intro-bg-wrap",
-      { padding: "1rem", duration: 0.6, ease: "power4.easeOut" },
-      "<0.6"
-    );
-
-    // Intro small text items from the hero section
-    introDesktop.fromTo(
-      "#nav-logo",
-      { x: -40, opacity: 0 },
-      {
-        x: 0,
-        autoAlpha: 1,
-        duration: 0.6,
-        ease: "power4.easeOut",
-      },
-      "<"
-    );
-    introDesktop.fromTo(
-      "#nav-list",
-      { x: 40, opacity: 0 },
-      { x: 0, autoAlpha: 1, duration: 0.8, ease: "power4.easeOut" },
-      "<"
-    );
-    introDesktop.fromTo(
-      ".hero-outro",
-      { y: 20, opacity: 0 },
-      { y: 0, autoAlpha: 1, duration: 0.8, ease: "power4.easeOut" },
-      "<"
-    );
-
-    // Intro hero-text
-    introDesktop.fromTo(
-      ".letter",
-      { y: -20, opacity: 0 },
-      { y: 0, autoAlpha: 1, duration: 0.6, ease: "power4.easeOut", stagger: 0.0085 },
-      "<"
-    );
-  });
 </script>

@@ -303,10 +303,28 @@ a:hover {
   @apply absolute -right-[100px] z-40 rounded-md bg-md-flamingo-400 py-1 px-2 font-jost text-white content-['gekopieerd'];
 }
 
-/* ------- Hero intro animation ------ */
+/* ------- Animations ------ */
 .letter {
   display: inline-block;
 }
 .tricksword {
   white-space: nowrap;
+}
+
+#intro-text .tricksword,
+.quote-text .tricksword {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+#intro-text .letter,
+.quote-text .letter {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+
+.pinky-container {
+  opacity: 0;
+  transform: translateY(100px);
 }
