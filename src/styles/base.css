@@ -304,27 +304,34 @@ a:hover {
 }
 
 /* ------- Animations ------ */
-.letter {
-  display: inline-block;
-}
-.tricksword {
-  white-space: nowrap;
+
+/* @keyframes intro-keyframes {
+  from {
+    transform: translateX(-100%);
+    transform-origin: left;
+  }
+
+  to {
+    transform: translateX(0%);
+  }
 }
 
-#intro-text .tricksword,
-.quote-text .tricksword {
-  position: relative;
-  display: inline-flex;
-  overflow: hidden;
-}
+.intro-loader {
+  animation: intro-keyframes 1s ease-in-out;
+} */
 
-#intro-text .letter,
-.quote-text .letter {
-  opacity: 0;
-  transform: translateY(-40px);
-}
+@media screen and (min-width: 479px) {
+  .letter {
+    display: inline-block;
+  }
+  .tricksword {
+    white-space: nowrap;
+  }
 
-.pinky-container {
-  opacity: 0;
-  transform: translateY(100px);
+  #intro-text .tricksword,
+  .quote-text .tricksword {
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+  }
 }
