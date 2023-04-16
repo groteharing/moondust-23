@@ -49,23 +49,99 @@ mm.add("(max-width: 767px)", () => {
   let introMobile = gsap.timeline({ defaults: {} });
 
   // Intro SVG logo
-  introMobile.to("#intro-svg", { ease: "power4.in", duration: 1.2, autoAlpha: 1 });
-  introMobile.to(
-    "#intro-svg",
-    { y: -80, ease: "power4.easeout", duration: 0.6, display: "none" },
-    1
+  introDesktop.to("#mask-logo", { x: 0, ease: "power1.easein", duration: 2, delay: 0.4 });
+  introDesktop.to("#mask-logo, #svg-stroke", {
+    y: -80,
+    ease: "power4.easeout",
+    duration: 0.4,
+    display: "none",
+  });
+  introDesktop.to("#intro-logo", { display: "none" }, "<");
+  introDesktop.to(
+    ".intro-loader",
+    { autoAlpha: 0, ease: "power4.easeout", duration: 0.4, display: "none" },
+    "<"
   );
 
   // Intro black background
-  introMobile.to(
+  introDesktop.to(
     "#intro-black",
-    { y: "-100vh", ease: "power4.easeinOut", duration: 0.8, display: "none" },
+    { y: "-100vh", ease: "power4.easeinOut", duration: 0.6, display: "none" },
     "<"
+  );
+  introDesktop.to(
+    "#intro-bg-wrap",
+    { padding: "1rem", duration: 0.6, ease: "power4.easeOut" },
+    "<0.6"
   );
 });
 
 // -- GSAP Desktop --
 mm.add("(min-width: 768px)", () => {
+  // --- TIMELINE SECTION ---
+  // Intro timeline dekstop
+  let introDesktop = gsap.timeline({ defaults: {} });
+
+  // Intro SVG logo
+  introDesktop.to("#mask-logo", { x: 0, ease: "power1.easein", duration: 2, delay: 0.4 });
+  introDesktop.to("#mask-logo, #svg-stroke", {
+    y: -80,
+    ease: "power4.easeout",
+    duration: 0.4,
+    display: "none",
+  });
+  introDesktop.to("#intro-logo", { display: "none" }, "<");
+  introDesktop.to(
+    ".intro-loader",
+    { autoAlpha: 0, ease: "power4.easeout", duration: 0.4, display: "none" },
+    "<"
+  );
+
+  // Intro black background
+  introDesktop.to(
+    "#intro-black",
+    { y: "-100vh", ease: "power4.easeinOut", duration: 0.6, display: "none" },
+    "<"
+  );
+  introDesktop.to(
+    "#intro-bg-wrap",
+    { padding: "1rem", duration: 0.6, ease: "power4.easeOut" },
+    "<0.6"
+  );
+
+  // Intro small text items from the hero section
+  introDesktop.fromTo(
+    "#nav-logo",
+    { x: -40, opacity: 0 },
+    {
+      x: 0,
+      autoAlpha: 1,
+      duration: 0.6,
+      ease: "power4.easeOut",
+    },
+    "<"
+  );
+  introDesktop.fromTo(
+    "#nav-list",
+    { x: 40, opacity: 0 },
+    { x: 0, autoAlpha: 1, duration: 0.8, ease: "power4.easeOut" },
+    "<"
+  );
+  introDesktop.fromTo(
+    ".hero-outro",
+    { y: 20, opacity: 0 },
+    { y: 0, autoAlpha: 1, duration: 0.8, ease: "power4.easeOut" },
+    "<"
+  );
+
+  // Intro hero-text
+  introDesktop.fromTo(
+    "#hero-headline .letter",
+    { y: -40, opacity: 0 },
+    { y: 0, autoAlpha: 1, duration: 0.4, ease: "power4.easeOut", stagger: 0.0085 },
+    "<"
+  );
+
   // --- SCROLLTRIGGER SECTION ---
   // Intro text
   gsap.from("#intro-text .letter", {
@@ -122,67 +198,6 @@ mm.add("(min-width: 768px)", () => {
     duration: 0.8,
     ease: "power4.easeOut",
   });
-
-  // --- TIMELINE SECTION ---
-  // Intro timeline dekstop
-  let introDesktop = gsap.timeline({ defaults: {} });
-
-  // Intro SVG logo
-  introDesktop.to(
-    "#intro-svg",
-    { y: -80, ease: "power4.easeout", duration: 0.6, display: "none" },
-    1
-  );
-  introDesktop.to(
-    ".intro-loader",
-    { autoAlpha: 0, ease: "power4.easeout", duration: 0.2, display: "none" },
-    "<"
-  );
-
-  // Intro black background
-  introDesktop.to(
-    "#intro-black",
-    { y: "-100vh", ease: "power4.easeinOut", duration: 0.6, display: "none" },
-    "<"
-  );
-  introDesktop.to(
-    "#intro-bg-wrap",
-    { padding: "1rem", duration: 0.6, ease: "power4.easeOut" },
-    "<0.6"
-  );
-
-  // Intro small text items from the hero section
-  introDesktop.fromTo(
-    "#nav-logo",
-    { x: -40, opacity: 0 },
-    {
-      x: 0,
-      autoAlpha: 1,
-      duration: 0.6,
-      ease: "power4.easeOut",
-    },
-    "<"
-  );
-  introDesktop.fromTo(
-    "#nav-list",
-    { x: 40, opacity: 0 },
-    { x: 0, autoAlpha: 1, duration: 0.8, ease: "power4.easeOut" },
-    "<"
-  );
-  introDesktop.fromTo(
-    ".hero-outro",
-    { y: 20, opacity: 0 },
-    { y: 0, autoAlpha: 1, duration: 0.8, ease: "power4.easeOut" },
-    "<"
-  );
-
-  // Intro hero-text
-  introDesktop.fromTo(
-    "#hero-headline .letter",
-    { y: -40, opacity: 0 },
-    { y: 0, autoAlpha: 1, duration: 0.4, ease: "power4.easeOut", stagger: 0.0085 },
-    "<"
-  );
 });
 
 // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.

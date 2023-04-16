@@ -303,22 +303,15 @@ a:hover {
   @apply absolute -right-[100px] z-40 rounded-md bg-md-flamingo-400 py-1 px-2 font-jost text-white content-['gekopieerd'];
 }
 
-/* ------- Animations ------ */
-
-/* @keyframes intro-keyframes {
-  from {
-    transform: translateX(-100%);
-    transform-origin: left;
-  }
-
-  to {
-    transform: translateX(0%);
-  }
+/* ----- Animations ----- */
+.logo-clip {
+  clip-path: url(#svg-mask);
+  -webkit-clip-path: url(#svg-mask);
 }
 
-.intro-loader {
-  animation: intro-keyframes 1s ease-in-out;
-} */
+.svg-logo {
+  @apply fill-none stroke-md-white stroke-1;
+}
 
 @media screen and (min-width: 479px) {
   .letter {
