@@ -49,27 +49,27 @@ mm.add("(max-width: 767px)", () => {
   let introMobile = gsap.timeline({ defaults: {} });
 
   // Intro SVG logo
-  introDesktop.to("#mask-logo", { x: 0, ease: "power1.easein", duration: 2, delay: 0.4 });
-  introDesktop.to("#mask-logo, #svg-stroke", {
+  introMobile.to("#mask-logo", { x: 0, ease: "power1.easein", duration: 2, delay: 0.4 });
+  introMobile.to("#mask-logo, #svg-stroke", {
     y: -80,
     ease: "power4.easeout",
     duration: 0.4,
     display: "none",
   });
-  introDesktop.to("#intro-logo", { display: "none" }, "<");
-  introDesktop.to(
+  introMobile.to("#intro-logo", { display: "none" }, "<");
+  introMobile.to(
     ".intro-loader",
     { autoAlpha: 0, ease: "power4.easeout", duration: 0.4, display: "none" },
     "<"
   );
 
   // Intro black background
-  introDesktop.to(
+  introMobile.to(
     "#intro-black",
     { y: "-100vh", ease: "power4.easeinOut", duration: 0.6, display: "none" },
     "<"
   );
-  introDesktop.to(
+  introMobile.to(
     "#intro-bg-wrap",
     { padding: "1rem", duration: 0.6, ease: "power4.easeOut" },
     "<0.6"
