@@ -79,8 +79,7 @@ mm.add("(min-width: 768px)", () => {
   let introDesktop = gsap.timeline({ defaults: {} });
 
   // Intro SVG logo
-  introDesktop.to("#svg-stroke", { autoAlpha: 1, duration: 0.2, delay: 0.2 });
-  introDesktop.to("#mask-logo", { x: 0, ease: "power1.easein", duration: 2 }, "<0.6");
+  introDesktop.to("#mask-logo", { x: 0, ease: "power1.easein", duration: 2 });
   introDesktop.to("#mask-logo, #svg-stroke", {
     y: -80,
     ease: "power4.easeout",
