@@ -49,7 +49,8 @@ mm.add("(max-width: 767px)", () => {
   let introMobile = gsap.timeline({ defaults: {} });
 
   // Intro SVG logo
-  introMobile.to("#mask-logo", { x: 0, ease: "power1.easein", duration: 2, delay: 0.4 });
+  introMobile.to("#svg-stroke", { autoAlpha: 1, duration: 0.2, delay: 0.2 });
+  introMobile.to("#mask-logo", { x: 0, ease: "power1.easein", duration: 2 }, "<0.6");
   introMobile.to("#mask-logo, #svg-stroke", {
     y: -80,
     ease: "power4.easeout",
@@ -66,13 +67,8 @@ mm.add("(max-width: 767px)", () => {
   // Intro black background
   introMobile.to(
     "#intro-black",
-    { y: "-100vh", ease: "power4.easeinOut", duration: 0.6, display: "none" },
+    { y: "-100%", ease: "power4.easeinOut", duration: 0.6, display: "none" },
     "<"
-  );
-  introMobile.to(
-    "#intro-bg-wrap",
-    { padding: "1rem", duration: 0.6, ease: "power4.easeOut" },
-    "<0.6"
   );
 });
 
@@ -83,7 +79,8 @@ mm.add("(min-width: 768px)", () => {
   let introDesktop = gsap.timeline({ defaults: {} });
 
   // Intro SVG logo
-  introDesktop.to("#mask-logo", { x: 0, ease: "power1.easein", duration: 2, delay: 0.4 });
+  introDesktop.to("#svg-stroke", { autoAlpha: 1, duration: 0.2, delay: 0.2 });
+  introDesktop.to("#mask-logo", { x: 0, ease: "power1.easein", duration: 2 }, "<0.6");
   introDesktop.to("#mask-logo, #svg-stroke", {
     y: -80,
     ease: "power4.easeout",

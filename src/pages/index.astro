@@ -15,25 +15,10 @@ import "../styles/base.css";
   og_site_name="#"
 >
   <main>
-    <!-- Mobile load media query 100vh -->
-    <script>
-      const smallDevice = window.matchMedia("(max-width: 478px)");
-
-      // smallDevice.addListener(handleDeviceChange);
-
-      function handleDeviceChange(e: any) {
-        if (e.matches)
-          document.getElementById("container-hero")!.style.height = window.innerHeight + "px";
-        else document.getElementById("container-hero")!.style.height = "100vh";
-      }
-
-      // // Run it initially
-      handleDeviceChange(smallDevice);
-    </script>
     <!-- hero -->
     <section
       id="container-hero"
-      class="hero relative mx-auto max-h-[1080px] max-w-screen-2xl font-jost md:h-screen"
+      class="hero mobile-vh relative mx-auto max-h-[1080px] max-w-screen-2xl font-jost md:h-screen"
       data-scroll-section
     >
       <div class="intro-wrap">
@@ -42,6 +27,7 @@ import "../styles/base.css";
           class="absolute top-0 left-0 z-40 flex h-full w-full items-center bg-md-black"
         >
         </div>
+        <!-- SVG logo intro -->
         <div
           id="intro-logo"
           class="logo-clip absolute left-1/2 top-1/2 z-40 mx-auto h-[71px] w-[330px] -translate-x-1/2 -translate-y-1/2"
@@ -55,7 +41,7 @@ import "../styles/base.css";
             fill="none"
             id="svg-stroke"
             xmlns="http://www.w3.org/2000/svg"
-            class="absolute top-0 left-0 z-50 w-full"
+            class="absolute top-0 left-0 z-50 w-full opacity-0"
           >
             <path
               d="M52.4587 40.1601C52.4587 36.0321 52.4587 30.8481 52.3627 26.8161C52.2667 24.2241 51.4027 21.3441 49.6747 19.5201C45.9307 15.6801 40.9387 14.7201 35.7547 16.1601C32.8747 16.9281 29.5147 20.0001 28.6507 22.1121C28.1707 21.1521 27.6907 20.2881 26.9227 19.5201C25.7707 18.2721 24.4267 17.3121 22.9867 16.6401C20.0107 15.2001 16.5547 15.0081 13.0987 16.1601C10.7947 16.8321 8.01067 19.5201 6.85867 21.4401C6.66667 20.0001 6.66667 18.2721 6.57067 16.6401H0.138667C0.138667 20.8641 0.0426666 24.6081 0.0426666 28.9281C-0.0533332 31.3281 0.0426666 34.7841 0.0426666 37.1841C0.0426666 39.5841 -0.0533332 52.0641 0.0426666 54.4641C0.0426666 55.4241 0.0426666 55.7121 0.0426666 55.7121C1.67467 55.7121 5.03467 55.7121 6.95467 55.7121C7.05067 54.8481 7.05067 54.1761 7.05067 53.5041C7.05067 48.0321 7.05067 43.5201 7.14667 38.0481C7.14667 36.2241 7.05067 32.7681 7.33867 31.0401C7.53067 26.9121 10.4107 22.8801 14.2507 22.4001C18.3787 21.8241 21.6427 23.6481 22.2187 27.5841C22.5067 29.2161 22.6027 30.8481 22.6027 32.4801C22.6987 36.0321 22.6027 39.3921 22.6027 42.9441C22.6027 44.7681 22.6027 47.4561 22.6027 49.2801C22.6027 51.4881 22.6027 53.4081 22.6027 55.7121C23.7547 55.7121 25.0027 55.7121 26.1547 55.7121C27.3067 55.7121 28.5547 55.7121 29.7067 55.7121C29.8027 55.0401 29.8027 54.6561 29.8027 54.0801C29.8027 53.4081 29.8027 52.7361 29.8027 52.0641C29.8027 47.1681 29.8027 43.0401 29.8987 38.0481C29.8987 36.2241 29.8027 32.7681 30.0907 31.0401C30.2827 26.9121 33.1627 22.8801 36.9067 22.4001C41.1307 21.8241 44.2987 23.6481 44.9707 27.5841C45.2587 29.2161 45.2587 30.8481 45.3547 32.4801C45.4507 36.0321 45.2587 39.3921 45.3547 42.9441C45.3547 44.7681 45.3547 47.4561 45.3547 49.2801C45.3547 51.4881 45.3547 53.4081 45.3547 55.7121C47.7547 55.7121 50.1547 55.7121 52.4587 55.7121C52.4587 55.0401 52.4587 54.6561 52.4587 54.0801C52.4587 49.2801 52.4587 44.9601 52.4587 40.1601Z"
@@ -125,7 +111,7 @@ import "../styles/base.css";
             </defs>
           </svg>
         </div>
-        <div id="intro-bg-wrap" class="absolute z-0 h-screen max-h-[1080px] w-full">
+        <div id="intro-bg-wrap" class="absolute z-0 h-full max-h-[1080px] w-full md:h-screen">
           <div
             id="intro-bg"
             class="z-0 h-full w-full bg-gradient-to-b from-md-astronaut-200 to-md-flamingo-200 md:rounded-3xl"
@@ -294,6 +280,22 @@ import "../styles/base.css";
     </section>
   </main>
 </Standard>
+
+<!-- Mobile load media query 100vh -->
+<script>
+  const smallDevice = window.matchMedia("(max-width: 478px)");
+
+  // smallDevice.addListener(handleDeviceChange);
+
+  function handleDeviceChange(e: any) {
+    if (e.matches)
+      document.getElementById("container-hero")!.style.height = window.innerHeight + "px";
+    else document.getElementById("container-hero")!.style.height = "100vh";
+  }
+
+  // // Run it initially
+  handleDeviceChange(smallDevice);
+</script>
 
 <!-- Load scripts -->
 <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
