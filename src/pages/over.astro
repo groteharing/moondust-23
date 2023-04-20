@@ -1,14 +1,13 @@
 ---
 import Mdwork from "../components/mdwork.astro";
 import Standard from "../layouts/standard.astro";
-import IntroWhite from "../components/intro-white.astro";
+import IntroWhite from "../components/gsap-intro-white.astro";
+import GSAPStandard from "../components/gsap-standard.astro";
 import "../styles/base.css";
 ---
 
 <Standard title="Studio Moondust - Over" h1="Over">
   <main>
-    <!-- intro-white -->
-    <IntroWhite />
     <section
       id="container-hero"
       class="hero px-4 pt-40 pb-16 font-jost md:pt-40 md:pb-24 lg:pt-56 lg:pb-36"
@@ -167,8 +166,9 @@ import "../styles/base.css";
         <li>Tess Verhees</li>
       </ul>
     </section><!-- /.gingen je voor -->
+    <!-- intro-white -->
+    <IntroWhite />
+    <!-- GSAP Standard -->
+    <GSAPStandard />
   </main>
 </Standard>
-
-<!-- GSAP & Locomotive animations -->
-<script type="module" is:inline src="/gsap-pages-standard.js"></script>

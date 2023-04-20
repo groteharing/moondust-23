@@ -1,6 +1,7 @@
 ---
-import Nav from '../components/nav.astro';
-import Footer from '../components/footer.astro';
+import Nav from "../components/nav.astro";
+import Footer from "../components/footer.astro";
+import IntroWhite from "../components/intro-white.astro";
 
 const {
   description,
@@ -39,6 +40,7 @@ const {
   </head>
   <body class="font-gangster font-light">
     <Nav />
+
     <section
       id="container-hero"
       class="hero px-4 pt-40 pb-16 font-jost md:pt-40 md:pb-24 lg:pt-56 lg:pb-36"
@@ -103,5 +105,7 @@ const {
     </section><!-- /.intro -->
     <slot />
     <Footer />
+    <!-- GSAP & Locomotive animations -->
+    <script type="module" is:inline src="/gsap-pages-standard.js"></script>
   </body>
 </html>
