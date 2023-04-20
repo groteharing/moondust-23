@@ -2,7 +2,7 @@
 ---
 
 <!-- ---- Intro Wrap ----- -->
-<div class="intro-wrap">
+<div class="intro-wrap hidden md:block">
   <div id="intro-white" class="fixed top-0 left-0 z-40 flex h-full w-full items-center bg-md-white">
   </div>
   <!-- SVG logo intro -->
@@ -117,41 +117,18 @@
     // Intro timeline mobile
     let introMobile = gsap.timeline({ defaults: {} });
 
-    // Intro SVG logo
-    introMobile.to("#mask-logo", { x: 0, ease: "power1.easeInOut", duration: 1.2, delay: 0.4 });
-    introMobile.to("#mask-logo, #svg-stroke", {
-      y: -80,
-      ease: "power4.easeout",
-      duration: 0.4,
-      display: "none",
-    });
-    introMobile.to("#intro-logo", { display: "none" }, "<");
-
-    // Intro white background
-    introMobile.to(
-      "#intro-white",
-      {
-        autoAlpha: 0,
-        ease: "power4.easeinOut",
-        duration: 1.2,
-        display: "none",
-        onComplete: () =>
-          document.querySelector(".stop-scrolling").classList.remove("stop-scrolling"),
-      },
-      "<"
-    );
-
-    // Intro small text items from the hero section
-    introMobile.from(
-      "#nav-logo",
-      { x: -40, autoAlpha: 0, duration: 0.8, ease: "power4.easeOut" },
-      "<"
-    );
-
     // Intro hero-text
     introMobile.from(
       ".hero-text .letter",
-      { y: -40, autoAlpha: 0, duration: 0.4, ease: "power4.easeOut", stagger: 0.0085 },
+      {
+        y: -40,
+        autoAlpha: 0,
+        duration: 0.4,
+        ease: "power4.easeOut",
+        stagger: 0.0085,
+        onComplete: () =>
+          document.querySelector(".stop-scrolling").classList.remove("stop-scrolling"),
+      },
       "<"
     );
   });

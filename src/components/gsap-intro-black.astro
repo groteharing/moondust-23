@@ -125,7 +125,7 @@
     let introMobile = gsap.timeline({ defaults: {} });
 
     // Intro SVG logo
-    introMobile.to("#mask-logo", { x: 0, ease: "power1.easein", duration: 2, delay: 0.6 });
+    introMobile.to("#mask-logo", { x: 0, ease: "power1.easein", duration: 1, delay: 0.4 });
     introMobile.to("#mask-logo, #svg-stroke", {
       y: -80,
       ease: "power4.easeout",
@@ -142,7 +142,14 @@
     // Intro black background
     introMobile.to(
       "#intro-black",
-      { y: "-100%", ease: "power4.easeinOut", duration: 0.6, display: "none" },
+      {
+        y: "-100%",
+        ease: "power4.easeinOut",
+        duration: 0.6,
+        display: "none",
+        onComplete: () =>
+          document.querySelector(".stop-scrolling").classList.remove("stop-scrolling"),
+      },
       "<"
     );
   });
