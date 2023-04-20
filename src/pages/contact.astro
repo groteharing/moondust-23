@@ -1,13 +1,16 @@
 ---
-import Standard from '../layouts/standard.astro';
-import '../styles/base.css';
+import Standard from "../layouts/standard.astro";
+import IntroWhite from "../components/intro-white.astro";
+import "../styles/base.css";
 ---
 
 <Standard title="Studio Moondust - Contact" h1="Contact">
   <main>
+    <!-- intro-white -->
+    <IntroWhite />
     <section class="hero-intro px-4 pt-40 pb-16 font-jost md:pt-40 md:pb-24 lg:pt-56 lg:pb-36">
       <div class="hero-text">
-        <h2>
+        <h2 class="tricks relative inline">
           Hello! Have a project? <br /> Let's chat.
         </h2>
       </div>
@@ -265,7 +268,7 @@ import '../styles/base.css';
       </div>
     </section><!-- /.img-divider -->
     <section class="quote mx-auto max-w-screen-xl py-16 px-4 md:px-16 lg:py-32">
-      <h3 class="quote-text">
+      <h3 class="quote-text tricks">
         *<br /> We zijn altijd op zoek naar freelancers om mee samen te werken. Interesse? Stuur een
         mail met je werk en waarom jij awesome bent
       </h3>
@@ -449,23 +452,26 @@ import '../styles/base.css';
   <script>
     // resizing text-area field
     const txHeight = 48;
-    const tx = document.getElementsByTagName('textarea');
+    const tx = document.getElementsByTagName("textarea");
 
     for (let i = 0; i < tx.length; i++) {
-      if (tx[i].value == '') {
-        tx[i].setAttribute('style', 'height:' + txHeight + 'px;overflow-y:hidden;');
+      if (tx[i].value == "") {
+        tx[i].setAttribute("style", "height:" + txHeight + "px;overflow-y:hidden;");
       } else {
         tx[i].setAttribute(
-          'style',
-          'height:' + tx[i].scrollHeight + 'px;overflow-y:hidden;' + 'padding-bottom:' + '8px;'
+          "style",
+          "height:" + tx[i].scrollHeight + "px;overflow-y:hidden;" + "padding-bottom:" + "8px;"
         );
       }
-      tx[i].addEventListener('input', OnInput, false);
+      tx[i].addEventListener("input", OnInput, false);
     }
 
     function OnInput(this: any) {
-      this.style.height = 'auto';
-      this.style.height = this.scrollHeight + 'px';
+      this.style.height = "auto";
+      this.style.height = this.scrollHeight + "px";
     }
   </script>
 </Standard>
+
+<!-- GSAP & Locomotive animations -->
+<script type="module" is:inline src="/gsap-pages-standard.js"></script>

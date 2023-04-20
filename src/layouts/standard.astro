@@ -31,13 +31,18 @@ const { title, h1, description, keywords, og_url, og_img_url, og_site_name } = A
 
     <link rel="stylesheet" href="/locomotive.css" />
   </head>
-  <body class="bg-md-bg font-gangster font-light" data-scroll-container>
+  <body class="stop-scrolling bg-md-bg font-gangster font-light">
     <h1 class="sr-only">{h1}</h1>
     <Nav />
     <slot />
     <Footer />
   </body>
 </html>
+
+<!-- Load scripts -->
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+></script>
 
 <script>
   // Find all buttons with the `tooltip` class on the page.

@@ -6,24 +6,17 @@ export interface Props {
   img_alt: string;
   href: string;
   mtop: string;
-  scrollSpeed: string;
 }
 
-const { title, description, img_src, img_alt, href, mtop, scrollSpeed } = Astro.props;
+const { title, description, img_src, img_alt, href, mtop } = Astro.props;
 ---
 
-<a
-  href={href}
-  class="card-container"
-  data-scroll
-  data-scroll-speed={scrollSpeed}
-  data-scroll-position="top"
->
+<a href={href} class="card-container">
   <div class={mtop}>
     <figure
-      class="img-wrap flex aspect-square w-full items-center justify-center overflow-hidden rounded-3xl bg-md-flamingo-100"
+      class="img-wrap border-fix flex aspect-square w-full items-center justify-center overflow-hidden rounded-3xl bg-md-flamingo-100"
     >
-      <img class="object-cover" src={img_src} alt={img_alt} />
+      <img class="card-image object-cover" src={img_src} alt={img_alt} />
     </figure>
     <div class="description py-1 px-2 pt-6">
       <h4>{title}</h4>

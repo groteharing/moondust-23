@@ -1,14 +1,19 @@
 ---
-import Standard from '../layouts/standard.astro';
-import Card from '../components/card.astro';
-import '../styles/base.css';
+import Standard from "../layouts/standard.astro";
+import Card from "../components/card.astro";
+import IntroWhite from "../components/intro-white.astro";
+import "../styles/base.css";
 ---
 
 <Standard title="Studio Moondust - Werk" h1="Werk">
   <main>
+    <!-- intro-white -->
+    <IntroWhite />
     <section class="hero px-4 pt-40 pb-16 font-jost md:pt-40 md:pb-24 lg:pt-56 lg:pb-36">
       <div class="hero-text">
-        <h2>Een paar fantastische projecten waar we aan hebben gewerkt</h2>
+        <h2 class="tricks relative inline">
+          Een paar fantastische projecten waar we aan hebben gewerkt
+        </h2>
       </div>
     </section><!-- /.hero -->
     <section class="projects mx-auto max-w-screen-xl px-4 md:px-16">
@@ -49,10 +54,13 @@ import '../styles/base.css';
       </div><!-- /.projects-grid -->
     </section><!-- /.projects -->
     <section class="quote mx-auto max-w-screen-xl px-4 pt-16 pb-8 md:px-16 lg:pt-32 lg:pb-16">
-      <h3 class="quote-text">
+      <h3 class="quote-text tricks">
         *<br /> Wat al deze mensen gemeen hebben: blablabla. We gaan lekker op onze values. Jij ook?
         Neem contact op JOW
       </h3>
     </section><!-- /.quote -->
   </main>
 </Standard>
+
+<!-- GSAP & Locomotive animations -->
+<script type="module" is:inline src="/gsap-pages-standard.js"></script>

@@ -313,6 +313,10 @@ a:hover {
   @apply fill-none stroke-md-white stroke-1;
 }
 
+.svg-logo-black {
+  @apply fill-none stroke-md-black stroke-1;
+}
+
 @media screen and (min-width: 479px) {
   .letter {
     display: inline-block;
@@ -327,4 +331,14 @@ a:hover {
     display: inline-flex;
     overflow: hidden;
   }
+}
+
+/* ------ FIXESSSS ------ */
+.border-fix {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }

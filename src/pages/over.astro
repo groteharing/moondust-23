@@ -1,17 +1,20 @@
 ---
-import Mdwork from '../components/mdwork.astro';
-import Standard from '../layouts/standard.astro';
-import '../styles/base.css';
+import Mdwork from "../components/mdwork.astro";
+import Standard from "../layouts/standard.astro";
+import IntroWhite from "../components/intro-white.astro";
+import "../styles/base.css";
 ---
 
 <Standard title="Studio Moondust - Over" h1="Over">
   <main>
+    <!-- intro-white -->
+    <IntroWhite />
     <section
       id="container-hero"
       class="hero px-4 pt-40 pb-16 font-jost md:pt-40 md:pb-24 lg:pt-56 lg:pb-36"
     >
       <div class="hero-text">
-        <h2>Slow design en positieve veranderingen</h2>
+        <h2 class="tricks relative inline">Slow design en positieve veranderingen</h2>
       </div>
     </section><!-- /.container-hero -->
     <section class="img-divider mx-auto max-w-screen-2xl md:px-4">
@@ -166,3 +169,6 @@ import '../styles/base.css';
     </section><!-- /.gingen je voor -->
   </main>
 </Standard>
+
+<!-- GSAP & Locomotive animations -->
+<script type="module" is:inline src="/gsap-pages-standard.js"></script>
