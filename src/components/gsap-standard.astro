@@ -20,13 +20,13 @@
       stagger: 0.00185,
     });
     // Quote text
-    gsap.from(".quote-text .letter", {
+    gsap.to(".quote-text .letter", {
       scrollTrigger: {
         trigger: ".quote",
         start: "top center", // when the top of the trigger hits the center of the viewport
       },
-      y: -40,
-      autoAlpha: 0,
+      y: 0,
+      autoAlpha: 1,
       duration: 0.8,
       ease: "power4.easeOut",
       stagger: 0.00285,
@@ -41,7 +41,6 @@
       },
       scaleX: 0,
       transformOrigin: "left center",
-      duration: 0.8,
       ease: "power1.easeIn",
     });
   });
