@@ -341,3 +341,7 @@ a:hover {
 .stop-scrolling {
   @apply md:h-full md:overflow-hidden;
 }
+
+.tricks .letter {
+  opacity: 0;
+}
