@@ -45,13 +45,13 @@
   // -- GSAP Desktop --
   mo.add("(min-width: 768px)", () => {
     // Intro text
-    gsap.from("#intro-text .letter", {
+    gsap.to("#intro-text .letter", {
       scrollTrigger: {
         trigger: ".intro-text",
         start: "bottom bottom", // when the bottom of the trigger hits the bottom of the viewport
       },
-      y: -40,
-      autoAlpha: 0,
+      y: 0,
+      autoAlpha: 1,
       ease: "power4.easeOut",
       stagger: 0.00185,
     });
