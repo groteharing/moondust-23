@@ -339,6 +339,5 @@ a:hover {
 }
 
 .stop-scrolling {
-  height: 100%;
-  overflow: hidden;
+  @apply md:h-full md:overflow-hidden;
 }

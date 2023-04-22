@@ -28,7 +28,7 @@ import "../styles/base.css";
         <div class="hero-grid relative z-20 grid h-full grid-rows-3 px-6">
           <div class="empty self-start"></div>
           <div class="hero-text overflow-hidden" id="hero-headline">
-            <h2 class="tricks relative inline text-md-white">
+            <h2 class="tricks relative inline tracking-tight text-md-white">
               Creatief micro-agency dat merken met een missie lanceert
             </h2>
             <div class="letter relative left-[-8] inline-block h-10 w-10 pt-1 lg:h-16 lg:w-16">
@@ -329,5 +329,40 @@ import "../styles/base.css";
   }
 </script>
 
-<!-- GSAP & Locomotive animations -->
-<script type="module" is:inline src="/gsap-home.js"></script>
+<!-- GSAP Home animations -->
+
+<script type="module" is:inline>
+  // --- GSAP MOBILE
+  let mo = gsap.matchMedia();
+  mo.add("(max-width: 767px)", () => {});
+
+  // -- GSAP Desktop --
+  mo.add("(min-width: 768px)", () => {
+    // --- SCROLLTRIGGER SECTION ---
+    // Card images
+    gsap.to(".card-image", {
+      scrollTrigger: {
+        trigger: ".card-container",
+        start: "center bottom", // when the bottom of the trigger hits the bottom of the viewport
+        end: "bottom top", // when the bottom of the trigger hits the top of the viewport
+        scrub: true,
+      },
+      scale: 1.08,
+      ease: "power1.easeIn",
+    });
+
+    // --- Pinky ---
+    gsap.from(".pinky-container", {
+      scrollTrigger: {
+        trigger: ".pinky-grid",
+        scrub: true,
+        start: "top bottom", // when the bottom of the trigger hits the bottom of the viewport
+        end: "top top", // when the top of the trigger hits the top of the viewport
+      },
+      y: 100,
+      autoAlpha: 0,
+      ease: "power4.easeOut",
+      stagger: 0.2,
+    });
+  });
+</script>
