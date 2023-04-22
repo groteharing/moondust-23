@@ -8,8 +8,7 @@ import Ipad from "../../components/werk/ipad.astro";
 import Mobile from "../../components/werk/mobile.astro";
 import Img from "../../components/werk/img.astro";
 import Desktop from "../../components/werk/desktop.astro";
-import IntroWhite from "../../components/gsap-intro-white.astro";
-import GSAPStandard from "../../components/gsap-standard.astro";
+import IntroWhite from "../../components/gsap/gsap-intro-white.astro";
 ---
 
 <Standard
@@ -21,6 +20,8 @@ import GSAPStandard from "../../components/gsap-standard.astro";
   og_img_alt="#"
   og_site_name="Studio Moondust"
 >
+  <!-- intro-white -->
+  <IntroWhite />
   <Hero
     heading="Een nieuw portfolio en webshop in één"
     client="Tess Verhees"
@@ -48,8 +49,4 @@ import GSAPStandard from "../../components/gsap-standard.astro";
       <a href="../werk">&lt; werk</a> / <a href="#"> next &gt;</a>
     </div><!-- /.quote -->
   </section>
-  <!-- intro-white -->
-  <IntroWhite />
-  <!-- GSAP Standard -->
-  <GSAPStandard />
 </Standard>

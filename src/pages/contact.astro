@@ -1,7 +1,6 @@
 ---
 import Standard from "../layouts/standard.astro";
-import IntroWhite from "../components/gsap-intro-white.astro";
-import GSAPStandard from "../components/gsap-standard.astro";
+import IntroWhite from "../components/gsap/gsap-intro-white.astro";
 import "../styles/base.css";
 ---
 
@@ -15,6 +14,8 @@ import "../styles/base.css";
   og_site_name="Studio Moondust - contact"
 >
   <main>
+    <!-- intro-white -->
+    <IntroWhite />
     <section class="hero-intro px-4 pt-40 pb-16 font-jost md:pt-40 md:pb-24 lg:pt-56 lg:pb-36">
       <div class="hero-text">
         <h2 class="tricks relative inline">
@@ -454,10 +455,6 @@ import "../styles/base.css";
         </div>
       </div>
     </section><!-- /.faq -->
-    <!-- intro-white -->
-    <IntroWhite />
-    <!-- GSAP Standard -->
-    <GSAPStandard />
   </main>
 
   <script>

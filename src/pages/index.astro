@@ -2,8 +2,7 @@
 import Standard from "../layouts/standard.astro";
 import Card from "../components/card.astro";
 import Pinky from "../components/pinky.astro";
-import IntroBlack from "../components/gsap-intro-black.astro";
-import GSAPStandard from "../components/gsap-standard.astro";
+import IntroBlack from "../components/gsap/gsap-intro-black.astro";
 import "../styles/base.css";
 ---
 
@@ -31,7 +30,9 @@ import "../styles/base.css";
             <h2 class="tricks relative inline tracking-tight text-md-white">
               Creatief micro-agency dat merken met een missie lanceert
             </h2>
-            <div class="letter relative left-[-8] inline-block h-10 w-10 pt-1 lg:h-16 lg:w-16">
+            <div
+              class="letter relative left-[-8] inline-block h-10 w-10 -translate-y-[40] pt-1 opacity-0 lg:h-16 lg:w-16"
+            >
               <svg
                 width="100%"
                 height="100%"
@@ -150,9 +151,6 @@ import "../styles/base.css";
         raakt, verbindt, transformeert, opvalt en converteert.
       </h3>
     </section>
-
-    <!-- GSAP Standard -->
-    <GSAPStandard />
   </main>
 </Standard>
 

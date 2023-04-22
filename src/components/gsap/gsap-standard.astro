@@ -4,7 +4,43 @@
 <script type="module" is:inline>
   // --- GSAP MOBILE
   let mo = gsap.matchMedia();
-  mo.add("(max-width: 767px)", () => {});
+  mo.add("(max-width: 767px)", () => {
+    // Intro text
+    gsap.to("#intro-text .letter", {
+      scrollTrigger: {
+        trigger: ".intro-text",
+        start: "top bottom", // when the bottom of the trigger hits the bottom of the viewport
+      },
+      y: 0,
+      autoAlpha: 1,
+      ease: "power4.easeOut",
+      stagger: 0.00185,
+    });
+    // Quote text
+    gsap.to(".quote-text .letter", {
+      scrollTrigger: {
+        trigger: ".quote",
+        start: "top center", // when the top of the trigger hits the center of the viewport
+      },
+      y: 0,
+      autoAlpha: 1,
+      duration: 0.8,
+      ease: "power4.easeOut",
+      stagger: 0.00285,
+    });
+    // Footer line
+    gsap.from(".footer-underline", {
+      scrollTrigger: {
+        trigger: ".footer-wrap",
+        scrub: true,
+        start: "center bottom", // when the center of the trigger hits the bottom of the viewport
+        end: "bottom bottom", // when the top of bottom trigger hits the center of the viewport
+      },
+      scaleX: 0,
+      transformOrigin: "left center",
+      ease: "power1.easeIn",
+    });
+  });
 
   // -- GSAP Desktop --
   mo.add("(min-width: 768px)", () => {
