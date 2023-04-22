@@ -238,7 +238,7 @@ a:hover {
 }
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 .hamburger-inner {
@@ -249,7 +249,7 @@ a:hover {
 .hamburger-inner::before {
   width: 24px;
   height: 1.5px;
-  background-color: #000000;
+  background-color: #ffffff;
   border-radius: 2px;
   position: relative;
   transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
@@ -273,9 +273,11 @@ a:hover {
 
 .hamburger--slider.is-active .hamburger-inner {
   transform: translate3d(0, 5px, 0) rotate(45deg);
+  background-color: #000000;
 }
 .hamburger--slider.is-active .hamburger-inner::before {
   transform: translate3d(0, -10px, 0) rotate(-90deg);
+  background-color: #000000;
 }
 
 [x-cloak] {
