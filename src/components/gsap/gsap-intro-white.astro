@@ -119,6 +119,19 @@ import GSAPword from "../gsap/gsap-word.astro";
       },
       "<"
     );
+    // Intro hero-text
+    introMobile.to(
+      ".hero-text .letter",
+      {
+        y: 0,
+        autoAlpha: 1,
+        ease: "power4.easeOut",
+        stagger: 0.0085,
+        onComplete: () =>
+          document.querySelector(".stop-scrolling").classList.remove("stop-scrolling"),
+      },
+      "<0.2"
+    );
   });
 
   // -- GSAP Desktop --
