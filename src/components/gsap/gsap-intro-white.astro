@@ -142,11 +142,11 @@ import GSAPword from "../gsap/gsap-word.astro";
     let introDesktop = gsap.timeline({ defaults: {} });
 
     // Intro SVG logo
-    introDesktop.to("#mask-logo", { x: 0, ease: "power1.easeInOut", duration: 1.2, delay: 0.4 });
+    introDesktop.to("#mask-logo", { x: 0, ease: "power1.easeInOut", duration: 0.8, delay: 0.4 });
     introDesktop.to("#mask-logo, #svg-stroke", {
       y: -80,
       ease: "power4.easeout",
-      duration: 0.4,
+      duration: 0.6,
       display: "none",
     });
     introDesktop.to("#intro-logo", { display: "none" }, "<");
@@ -157,7 +157,7 @@ import GSAPword from "../gsap/gsap-word.astro";
       {
         autoAlpha: 0,
         ease: "power4.easeinOut",
-        duration: 0.4,
+        duration: 0.6,
         display: "none",
         onComplete: () =>
           document.querySelector(".stop-scrolling").classList.remove("stop-scrolling"),
@@ -168,19 +168,19 @@ import GSAPword from "../gsap/gsap-word.astro";
     // Intro small text items from the hero section
     introDesktop.from(
       "#nav-logo",
-      { x: -40, autoAlpha: 0, duration: 0.8, ease: "power4.easeOut" },
+      { x: -40, autoAlpha: 0, duration: 1, ease: "power4.easeOut" },
       "<"
     );
     introDesktop.from(
       "#nav-list",
-      { x: 40, autoAlpha: 0, duration: 0.8, ease: "power4.easeOut" },
+      { x: 40, autoAlpha: 0, duration: 1, ease: "power4.easeOut" },
       "<"
     );
 
     // Intro hero-text
     introDesktop.to(
       ".hero-text .letter",
-      { y: 0, autoAlpha: 1, duration: 0.4, ease: "power4.easeOut", stagger: 0.0085 },
+      { y: 0, autoAlpha: 1, duration: 0.6, ease: "power4.easeOut", stagger: 0.0085 },
       "<"
     );
   });
