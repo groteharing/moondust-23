@@ -1,22 +1,22 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
-import alpinejs from '@astrojs/alpinejs';
+import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
-import tailwind from '@astrojs/tailwind';
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
-import partytown from '@astrojs/partytown';
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
-import sitemap from '@astrojs/sitemap';
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://moondust.com',
+  site: "https://studiomoondust.com",
   integrations: [
     alpinejs(),
     tailwind({
