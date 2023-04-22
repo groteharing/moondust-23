@@ -1,5 +1,4 @@
 ---
-import Nav from "../components/nav.astro";
 import Footer from "../components/footer.astro";
 
 const { title, h1, description, keywords, og_url, og_img_url, og_site_name } = Astro.props;
@@ -31,7 +30,6 @@ const { title, h1, description, keywords, og_url, og_img_url, og_site_name } = A
   </head>
   <body class="stop-scrolling bg-md-bg font-gangster font-light">
     <h1 class="sr-only">{h1}</h1>
-    <Nav />
     <slot />
     <Footer />
   </body>

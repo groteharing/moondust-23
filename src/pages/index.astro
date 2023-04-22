@@ -1,5 +1,6 @@
 ---
 import Standard from "../layouts/standard.astro";
+import Nav from "../components/nav.astro";
 import Card from "../components/card.astro";
 import Pinky from "../components/pinky.astro";
 import IntroBlack from "../components/gsap/gsap-intro-black.astro";
@@ -15,15 +16,15 @@ import "../styles/base.css";
   og_img_alt="Studio Moondust logo"
   og_site_name="Studio Moondust"
 >
+  <Nav fill="white" />
   <main>
-    <!-- intro-black -->
     <IntroBlack />
     <!-- hero -->
     <section
       id="container-hero"
       class="hero mobile-vh relative mx-auto max-h-[1080px] max-w-screen-2xl font-jost md:h-screen"
     >
-      <div class="hero relative z-20 h-full w-full overflow-hidden md:px-4 md:py-4">
+      <div class="hero relative z-20 h-full w-full overflow-hidden text-md-white md:px-4 md:py-4">
         <div class="hero-grid relative z-20 grid h-full grid-rows-3 px-6">
           <div class="empty self-start"></div>
           <div class="hero-text overflow-hidden" id="hero-headline">

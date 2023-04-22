@@ -1,5 +1,6 @@
 ---
 import Standard from "../layouts/standard.astro";
+import Nav from "../components/nav.astro";
 import Card from "../components/card.astro";
 import IntroWhite from "../components/gsap/gsap-intro-white.astro";
 import "../styles/base.css";
@@ -15,7 +16,7 @@ import "../styles/base.css";
   og_site_name="Studio Moondust - werk"
 >
   <main>
-    <!-- intro-white -->
+    <Nav fill="black" />
     <IntroWhite />
     <section class="hero px-4 pt-40 pb-16 font-jost md:pt-40 md:pb-24 lg:pt-56 lg:pb-36">
       <div class="hero-text">

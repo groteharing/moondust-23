@@ -1,5 +1,6 @@
 ---
 import Standard from "../../layouts/standard.astro";
+import Nav from "../../components/nav.astro";
 import "../../styles/base.css";
 import Hero from "../../components/werk/hero.astro";
 import Hero_img from "../../components/werk/hero_img.astro";
@@ -20,7 +21,7 @@ import IntroWhite from "../../components/gsap/gsap-intro-white.astro";
   og_img_alt="Studio Moondust X Willemsen Isolatiebouw"
   og_site_name="Studio Moondust X Willemsen Isolatiebouw"
 >
-  <!-- intro-white -->
+  <Nav fill="black" />
   <IntroWhite />
   <Hero
     heading="Een nieuwe website voor een bedreven familiebedrijf"
