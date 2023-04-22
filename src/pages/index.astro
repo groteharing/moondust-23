@@ -341,12 +341,12 @@ import "../styles/base.css";
     gsap.to(".card-image", {
       scrollTrigger: {
         trigger: ".card-container",
-        start: "center bottom", // when the bottom of the trigger hits the bottom of the viewport
+        start: "top center", // when the bottom of the trigger hits the bottom of the viewport
         end: "bottom top", // when the bottom of the trigger hits the top of the viewport
         scrub: true,
       },
-      scale: 1.08,
-      ease: "power1.easeIn",
+      scale: 1.06,
+      ease: "power1.easeOut",
     });
 
     // --- Pinky ---
