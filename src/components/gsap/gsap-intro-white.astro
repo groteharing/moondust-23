@@ -103,13 +103,13 @@ import GSAPword from "../gsap/gsap-word.astro";
 
     // Intro hero-text
     introMobile.to(
-      ".intro .letter",
+      ".hero-text .letter",
       {
         y: 0,
         autoAlpha: 1,
         duration: 0.4,
         ease: "power4.easeOut",
-        stagger: 0.0085,
+        stagger: 0.0095,
         onComplete: () =>
           document.querySelector(".stop-scrolling").classList.remove("stop-scrolling"),
       },
