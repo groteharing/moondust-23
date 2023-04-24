@@ -82,8 +82,8 @@ const { fill } = Astro.props;
   x-on:click="navOpen = !navOpen"
   x-bind:class="navOpen && 'is-active'"
 >
-  <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
+  <span class="hamburger-box md:hidden">
+    <span class="hamburger-inner md:hidden"></span>
   </span>
 </button>
 <!-- end .nav-hamburger -->
