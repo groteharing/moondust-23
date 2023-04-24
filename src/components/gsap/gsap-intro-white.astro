@@ -103,6 +103,14 @@ import GSAPword from "../gsap/gsap-word.astro";
 
     // Intro hero-text
     introMobile.to(
+      ".hero-text",
+      {
+        autoAlpha: 1,
+        duration: 0,
+      },
+      "<"
+    );
+    introMobile.to(
       ".hero-text .letter",
       {
         y: 0,
