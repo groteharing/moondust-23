@@ -77,7 +77,7 @@ const { fill } = Astro.props;
 </style>
 
 <button
-  class="hamburger hamburger--slider relative z-50 flex flex-col items-center md:hidden"
+  class="hamburger hamburger--slider relative z-50 flex flex-col items-center md:hidden md:opacity-0"
   type="button"
   x-on:click="navOpen = !navOpen"
   x-bind:class="navOpen && 'is-active'"
