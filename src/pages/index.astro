@@ -357,10 +357,10 @@ import "../styles/base.css";
     // --- Pinky ---
     gsap.from(".pinky-container", {
       scrollTrigger: {
-        trigger: ".pinky-grid",
+        trigger: ".pinky-promises",
         scrub: true,
-        start: "top bottom", // when the bottom of the trigger hits the bottom of the viewport
-        end: "center center", // when the top of the trigger hits the top of the viewport
+        start: "30% bottom", // when the top of the trigger hits the bottom of the viewport
+        end: "bottom bottom", // when the bottom of the trigger hits the bottom of the viewport
       },
       y: 100,
       autoAlpha: 0,
