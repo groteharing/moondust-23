@@ -8,6 +8,7 @@ import GSAPword from "../gsap/gsap-word.astro";
   </div>
   <!-- SVG logo intro -->
   <div
+    id="logo-svg-container"
     class="absolute left-1/2 top-1/2 z-50 mx-auto h-[71px] w-[330px] -translate-x-1/2 -translate-y-1/2 overflow-hidden"
   >
     <div class="logo-svg-wrap top-0 left-0 w-full">
@@ -120,7 +121,7 @@ import GSAPword from "../gsap/gsap-word.astro";
       duration: 0.4,
       display: "none",
     });
-    introMobile.to("#intro-logo", { display: "none" }, "<");
+    introMobile.to("#intro-logo, #logo-svg-container", { display: "none" }, "<");
 
     // Intro black background
     introMobile.to(
@@ -167,7 +168,7 @@ import GSAPword from "../gsap/gsap-word.astro";
       duration: 0.4,
       display: "none",
     });
-    introDesktop.to("#intro-logo", { display: "none" }, "<");
+    introDesktop.to("#intro-logo, .intro-wrap, #logo-svg-container", { display: "none" }, "<");
 
     // Intro black background
     introDesktop.to(
